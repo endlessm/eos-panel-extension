@@ -5,6 +5,7 @@ project('eos-panel-extension',
 
 sources = [
   'extension.js',
+  'utils.js',
 ]
 extra_data = [
   'COPYING',
