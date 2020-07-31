@@ -50,3 +50,17 @@ endforeach
 
 glib_compile = find_program('glib-compile-schemas', required: true)
 meson.add_install_script('meson-postinstall.sh', schemadir)
+
+sassc = find_program('sassc', required: true)
+sassc_opts = [ '-a', '-M', '-t', 'compact' ]
+styles = custom_target('styles',
+  input: 'stylesheet.scss',
+  output: 'stylesheet.css',
+  command: [
+    sassc, sassc_opts, '@INPUT@', '@OUTPUT@',
+  ],
+  depend_files: 'stylesheet.scss',
+  install: true,
+  install_dir: extensiondir,
+  build_by_default: true
+)
