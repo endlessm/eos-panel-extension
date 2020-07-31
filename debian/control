@@ -1,0 +1,23 @@
+Source: eos-panel-extension
+Section: gnome
+Priority: optional
+Maintainer: Andre Moreira Magalhaes <andre@endlessm.com>
+Uploaders: Andre Moreira Magalhaes <andre@endlessm.com>
+Build-Depends:
+ libglib2.0-bin (>= 2.62),
+ sassc (>= 3.5.0),
+ debhelper-compat (= 12),
+ meson (>= 0.40.0)
+Standards-Version: 4.4.0
+Homepage: https://github.com/endlessm/eos-panel-extension
+Vcs-Browser: https://github.com/endlessm/eos-panel-extension
+Vcs-Git: https://github.com/endlessm/eos-panel-extension.git
+
+Package: eos-panel-extension
+Architecture: all
+Depends:
+ gnome-shell (>= 3.35),
+ gnome-shell (>= 3.37.3),
+ ${shlibs:Depends},
+ ${misc:Depends}
+Description: Endless OS panel extension for GNOME Shell
