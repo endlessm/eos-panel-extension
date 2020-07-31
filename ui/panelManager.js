@@ -1,5 +1,5 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
-/* exported init */
+/* exported PanelManager */
 /*
  * Copyright © 2020 Endless OS Foundation LLC
  *
@@ -17,24 +17,21 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-const ExtensionUtils = imports.misc.extensionUtils;
-const PanelExtension = ExtensionUtils.getCurrentExtension();
-const PanelManager = PanelExtension.imports.ui.panelManager;
+const { GObject } = imports.gi;
 
-class Extension {
-    constructor() {
-        this._panelManager = new PanelManager.PanelManager();
+var PanelManager = GObject.registerClass(
+class PanelManager extends GObject.Object {
+    _init() {
+        super._init();
+
+        this.enabled = false;
     }
 
     enable() {
-        this._panelManager.enable();
+        this.enabled = true;
     }
 
     disable() {
-        this._panelManager.disable();
+        this.enabled = false;
     }
-}
-
-function init() {
-    return new Extension();
-}
+});

@@ -7,6 +7,9 @@ sources = [
   'extension.js',
   'utils.js',
 ]
+ui_sources = [
+  'ui/panelManager.js',
+]
 extra_data = [
   'COPYING',
 ]
@@ -19,6 +22,7 @@ uuid = 'eos-panel@endlessm.com'
 datadir = get_option('datadir')
 extensiondir = join_paths(datadir, 'gnome-shell', 'extensions', uuid)
 schemadir = join_paths(extensiondir, 'schemas')
+uidir = join_paths(extensiondir, 'ui')
 
 metaconf = configuration_data()
 metaconf.set('uuid', uuid)
@@ -33,6 +37,10 @@ meta = [
 
 install_data(sources,
   install_dir: extensiondir
+)
+
+install_data(ui_sources,
+  install_dir: uidir
 )
 
 install_data(extra_data,
