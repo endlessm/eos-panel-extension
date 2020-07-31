@@ -1,0 +1,10 @@
+{
+  "uuid": "@uuid@",
+  "name": "Endless OS Desktop Panel",
+  "description": "Endless OS Desktop Panel",
+  "settings-schema": "@settings_schema@",
+  "shell-version": [
+    "3.38"
+  ],
+  "url": "https://github.com/endlessm/eos-panel-extension"
+}
