@@ -45,8 +45,8 @@ const ICON_BOUNCE_ANIMATION_TYPE_2 = Clutter.AnimationMode.EASE_OUT_BOUNCE;
 const PANEL_WINDOW_MENU_THUMBNAIL_SIZE = 128;
 
 function _compareByStableSequence(winA, winB) {
-    let seqA = winA.get_stable_sequence();
-    let seqB = winB.get_stable_sequence();
+    const seqA = winA.get_stable_sequence();
+    const seqB = winB.get_stable_sequence();
 
     return seqA - seqB;
 }
@@ -60,26 +60,26 @@ class WindowMenuItem extends PopupMenu.PopupBaseMenuItem {
 
         this.add_style_class_name('panel-window-menu-item');
 
-        let windowActor = this._findWindowActor();
-        let monitor = Main.layoutManager.primaryMonitor;
+        const windowActor = this._findWindowActor();
+        const monitor = Main.layoutManager.primaryMonitor;
 
         // constraint the max size of the clone to the aspect ratio
         // of the primary display, where the panel lives
-        let ratio = monitor.width / monitor.height;
-        let maxW = ratio > 1
+        const ratio = monitor.width / monitor.height;
+        const maxW = ratio > 1
             ? PANEL_WINDOW_MENU_THUMBNAIL_SIZE : PANEL_WINDOW_MENU_THUMBNAIL_SIZE * ratio;
-        let maxH = ratio > 1
+        const maxH = ratio > 1
             ? PANEL_WINDOW_MENU_THUMBNAIL_SIZE / ratio : PANEL_WINDOW_MENU_THUMBNAIL_SIZE;
 
-        let clone = new Clutter.Actor({
+        const clone = new Clutter.Actor({
             content: windowActor.get_texture(),
             request_mode: Clutter.RequestMode.CONTENT_SIZE,
         });
-        let cloneW = clone.width;
-        let cloneH = clone.height;
+        const cloneW = clone.width;
+        const cloneH = clone.height;
 
-        let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-        let scale = Math.min(maxW / cloneW, maxH / cloneH) * scaleFactor;
+        const scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+        const scale = Math.min(maxW / cloneW, maxH / cloneH) * scaleFactor;
 
         clone.set_size(Math.round(cloneW * scale), Math.round(cloneH * scale));
 
@@ -101,8 +101,8 @@ class WindowMenuItem extends PopupMenu.PopupBaseMenuItem {
     }
 
     _findWindowActor() {
-        let actors = global.get_window_actors();
-        let windowActors = actors.filter(actor => {
+        const actors = global.get_window_actors();
+        const windowActors = actors.filter(actor => {
             return actor.meta_window === this.window;
         });
 
@@ -165,12 +165,12 @@ const AppIconMenu = class extends PopupMenu.PopupMenu {
     _redisplay() {
         this._submenuItem.menu.removeAll();
 
-        let workspaceManager = global.workspace_manager;
-        let activeWorkspace = workspaceManager.get_active_workspace();
+        const workspaceManager = global.workspace_manager;
+        const activeWorkspace = workspaceManager.get_active_workspace();
 
-        let windows = this._app.get_windows();
-        let workspaceWindows = [];
-        let otherWindows = [];
+        const windows = this._app.get_windows();
+        const workspaceWindows = [];
+        const otherWindows = [];
 
         windows.forEach(w => {
             if (w.is_skip_taskbar())
@@ -185,8 +185,8 @@ const AppIconMenu = class extends PopupMenu.PopupMenu {
         workspaceWindows.sort(_compareByStableSequence.bind(this));
         otherWindows.sort(_compareByStableSequence.bind(this));
 
-        let hasWorkspaceWindows = workspaceWindows.length > 0;
-        let hasOtherWindows = otherWindows.length > 0;
+        const hasWorkspaceWindows = workspaceWindows.length > 0;
+        const hasOtherWindows = otherWindows.length > 0;
 
         // Display windows from other workspaces first, if present, since our panel
         // is at the bottom, and it's much more convenient to just move up the pointer
@@ -207,22 +207,22 @@ const AppIconMenu = class extends PopupMenu.PopupMenu {
     }
 
     _appendOtherWorkspacesLabel() {
-        let label = new PopupMenu.PopupMenuItem(_('Other workspaces'));
+        const label = new PopupMenu.PopupMenuItem(_('Other workspaces'));
         label.label.add_style_class_name('panel-window-menu-workspace-label');
         this._submenuItem.menu.addMenuItem(label);
     }
 
     _appendCurrentWorkspaceSeparator() {
-        let separator = new PopupMenu.PopupSeparatorMenuItem();
+        const separator = new PopupMenu.PopupSeparatorMenuItem();
         this._submenuItem.menu.addMenuItem(separator);
 
-        let label = new PopupMenu.PopupMenuItem(_('Current workspace'));
+        const label = new PopupMenu.PopupMenuItem(_('Current workspace'));
         label.label.add_style_class_name('panel-window-menu-workspace-label');
         this._submenuItem.menu.addMenuItem(label);
     }
 
     _appendMenuItem(window, hasOtherWindows) {
-        let item = new WindowMenuItem(window);
+        const item = new WindowMenuItem(window);
         this._submenuItem.menu.addMenuItem(item);
 
         if (hasOtherWindows)
@@ -260,11 +260,10 @@ const AppIconButton = GObject.registerClass({
         this._app = app;
 
         this._iconSize = iconSize;
-        let icon = this._createIcon();
 
         super._init({
             style_class: 'app-icon-button',
-            child: icon,
+            child: this._createIcon(),
             button_mask: St.ButtonMask.ONE | St.ButtonMask.THREE,
             reactive: true,
         });
@@ -313,7 +312,7 @@ const AppIconButton = GObject.registerClass({
                 this._unpinMenuItem.actor.visible = false;
 
             this._rightClickMenu.connect('menu-closed', () => {
-                let isPinned = AppFavorites.getAppFavorites().isFavorite(this._app.get_id());
+                const isPinned = AppFavorites.getAppFavorites().isFavorite(this._app.get_id());
                 this._pinMenuItem.actor.visible = !isPinned;
                 this._unpinMenuItem.actor.visible = isPinned;
             });
@@ -335,7 +334,7 @@ const AppIconButton = GObject.registerClass({
             // Setting the max-height won't do any good if the minimum height of the
             // menu is higher then the screen; it's useful if part of the menu is
             // scrollable so the minimum height is smaller than the natural height
-            let workArea = Main.layoutManager.getWorkAreaForMonitor(Main.layoutManager.primaryIndex);
+            const workArea = Main.layoutManager.getWorkAreaForMonitor(Main.layoutManager.primaryIndex);
             this._menu.actor.style = 'max-height: %dpx;'.format(Math.round(workArea.height));
         });
 
@@ -367,7 +366,7 @@ const AppIconButton = GObject.registerClass({
     }
 
     _syncQuitMenuItemVisible() {
-        let visible = this._app.get_state() === Shell.AppState.RUNNING;
+        const visible = this._app.get_state() === Shell.AppState.RUNNING;
         this._quitMenuItem.actor.visible = visible;
     }
 
@@ -376,7 +375,7 @@ const AppIconButton = GObject.registerClass({
     }
 
     _hasOtherMenuOpen() {
-        let activeIconMenu = this._menuManager.activeMenu;
+        const activeIconMenu = this._menuManager.activeMenu;
         return activeIconMenu &&
             activeIconMenu !== this._menu &&
             activeIconMenu.isOpen;
@@ -397,19 +396,19 @@ const AppIconButton = GObject.registerClass({
     }
 
     _handleButtonPressEvent(actor, event) {
-        let button = event.get_button();
-        let clickCount = event.get_click_count();
+        const button = event.get_button();
+        const clickCount = event.get_click_count();
 
         if (button === Gdk.BUTTON_PRIMARY &&
             clickCount === 1) {
             this._hideHoverState();
             this.emit('app-icon-pressed');
 
-            let windows = this._getInterestingWindows();
-            let numRealWindows = windows.length;
+            const windows = this._getInterestingWindows();
+            const numRealWindows = windows.length;
 
             if (numRealWindows > 1) {
-                let hasOtherMenu = this._hasOtherMenuOpen();
+                const hasOtherMenu = this._hasOtherMenuOpen();
                 let animation = BoxPointer.PopupAnimation.FULL;
                 if (hasOtherMenu)
                     animation = BoxPointer.PopupAnimation.NONE;
@@ -431,8 +430,8 @@ const AppIconButton = GObject.registerClass({
     }
 
     _handleClickEvent() {
-        let event = Clutter.get_current_event();
-        let button = event.get_button();
+        const event = Clutter.get_current_event();
+        const button = event.get_button();
 
         if (button === Gdk.BUTTON_SECONDARY) {
             this._hideHoverState();
@@ -445,18 +444,18 @@ const AppIconButton = GObject.registerClass({
             return;
         }
 
-        let hasOtherMenu = this._hasOtherMenuOpen();
+        const hasOtherMenu = this._hasOtherMenuOpen();
         this._closeOtherMenus(BoxPointer.PopupAnimation.FULL);
         this._animateBounce();
 
-        let windows = this._getInterestingWindows();
-        let numRealWindows = windows.length;
+        const windows = this._getInterestingWindows();
+        const numRealWindows = windows.length;
 
         // The multiple windows case is handled in button-press-event
         if (windows.length === 0) {
             this._app.activate_full(-1, global.get_current_time());
         } else if (numRealWindows === 1) {
-            let win = windows[0];
+            const win = windows[0];
             if (win.has_focus() && !Main.overview.visible && !hasOtherMenu) {
                 // The overview is not visible, and this is the
                 // currently focused application; minimize it
@@ -471,7 +470,7 @@ const AppIconButton = GObject.registerClass({
     activateFirstWindow() {
         this._animateBounce();
         this._closeOtherMenus(BoxPointer.PopupAnimation.FULL);
-        let windows = this._getInterestingWindows();
+        const windows = this._getInterestingWindows();
         if (windows.length > 0)
             Main.activateWindow(windows[0]);
         else
@@ -496,7 +495,7 @@ const AppIconButton = GObject.registerClass({
         // Calculate location of the label only if we're not tweening as the
         // values will be inaccurate
         if (!this._isBouncing) {
-            let iconMidpoint = this.get_transformed_position()[0] + this.width / 2;
+            const iconMidpoint = this.get_transformed_position()[0] + this.width / 2;
             this._label.translation_x = Math.floor(iconMidpoint - this._label.width / 2);
             this._label.translation_y = Math.floor(this.get_transformed_position()[1] - this._labelOffsetY);
 
@@ -535,14 +534,14 @@ const AppIconButton = GObject.registerClass({
     }
 
     setIconSize(iconSize) {
-        let icon = this._app.create_icon_texture(iconSize);
+        const icon = this._app.create_icon_texture(iconSize);
         this._iconSize = iconSize;
 
         this.set_child(icon);
     }
 
     _setIconRectForAllWindows(rectangle) {
-        let windows = this._app.get_windows();
+        const windows = this._app.get_windows();
         windows.forEach(win => win.set_icon_geometry(rectangle));
     }
 
@@ -554,7 +553,7 @@ const AppIconButton = GObject.registerClass({
         if (!this.mapped)
             return;
 
-        let rect = new Meta.Rectangle();
+        const rect = new Meta.Rectangle();
         [rect.x, rect.y] = this.get_transformed_position();
         [rect.width, rect.height] = this.get_transformed_size();
 
@@ -615,7 +614,7 @@ const ScrolledIconList = GObject.registerClass({
         // clipping out the side paddings we want to set on the actual icons
         // container. We need to go through some hoops and set the padding
         // on an intermediate spacer child instead
-        let scrollChild = new St.BoxLayout();
+        const scrollChild = new St.BoxLayout();
         this.add_actor(scrollChild);
 
         this._spacerBin = new St.Widget({
@@ -639,7 +638,7 @@ const ScrolledIconList = GObject.registerClass({
 
         this._container.connect('style-changed', this._updateStyleConstants.bind(this));
 
-        let appSys = Shell.AppSystem.get_default();
+        const appSys = Shell.AppSystem.get_default();
 
         if (ParentalControlsManager)
             this._parentalControlsManager = ParentalControlsManager.getDefault();
@@ -648,27 +647,27 @@ const ScrolledIconList = GObject.registerClass({
 
         this._taskbarApps = new Map();
 
-        let appFavorites = AppFavorites.getAppFavorites();
-        let favorites = appFavorites.getFavorites();
-        for (let favorite of favorites)
+        const appFavorites = AppFavorites.getAppFavorites();
+        const favorites = appFavorites.getFavorites();
+        for (const favorite of favorites)
             this._addButton(favorite);
 
         // Update for any apps running before the system started
         // (after a crash or a restart)
-        let currentlyRunning = appSys.get_running();
-        let appsByPid = [];
+        const currentlyRunning = appSys.get_running();
+        const appsByPid = [];
         for (let i = 0; i < currentlyRunning.length; i++) {
-            let app = currentlyRunning[i];
+            const app = currentlyRunning[i];
             // Most apps have a single PID; ignore all but the first
-            let pid = app.get_pids()[0];
+            const pid = app.get_pids()[0];
             appsByPid.push({ pid, app });
         }
 
         // Sort numerically by PID
         // This preserves the original app order, until the maximum PID
         // value is reached and older PID values are recycled
-        let sortedPids = appsByPid.sort((a, b) => a.pid - b.pid);
-        for (let sortedPid of sortedPids)
+        const sortedPids = appsByPid.sort((a, b) => a.pid - b.pid);
+        for (const sortedPid of sortedPids)
             this._addButton(sortedPid.app);
 
         this._appFavoritesChangedId = appFavorites.connect('changed',
@@ -682,9 +681,10 @@ const ScrolledIconList = GObject.registerClass({
 
         if (this._parentalControlsManager) {
             this._appFilterChangedId = this._parentalControlsManager.connect('app-filter-changed', () => {
-                for (let [app, appButton] of this._taskbarApps) {
-                    let shouldShow = this._parentalControlsManager.shouldShowApp(app.get_app_info());
-                    let stopped = app.state === Shell.AppState.STOPPED;
+                for (const [app, appButton] of this._taskbarApps) {
+                    const shouldShow =
+                        this._parentalControlsManager.shouldShowApp(app.get_app_info());
+                    const stopped = app.state === Shell.AppState.STOPPED;
 
                     appButton.visible = !stopped || shouldShow;
                 }
@@ -696,19 +696,19 @@ const ScrolledIconList = GObject.registerClass({
 
     _onDestroy() {
         if (this._appFavoritesChangedId) {
-            let appFavorites = AppFavorites.getAppFavorites();
+            const appFavorites = AppFavorites.getAppFavorites();
             appFavorites.disconnect(this._appFavoritesChangedId);
             this._appFavoritesChangedId = 0;
         }
 
         if (this._appInstalledChangedId) {
-            let appSys = Shell.AppSystem.get_default();
+            const appSys = Shell.AppSystem.get_default();
             appSys.disconnect(this._appInstalledChangedId);
             this._appInstalledChangedId = 0;
         }
 
         if (this._appStateChangedId) {
-            let appSys = Shell.AppSystem.get_default();
+            const appSys = Shell.AppSystem.get_default();
             appSys.disconnect(this._appStateChangedId);
             this._appStateChangedId = 0;
         }
@@ -735,15 +735,15 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     getNumVisibleAppButtons() {
-        let buttons = [...this._taskbarApps.values()];
+        const buttons = [...this._taskbarApps.values()];
         return buttons.reduce((counter, appButton) => {
             return appButton.visible ? counter : counter + 1;
         }, 0);
     }
 
     activateNthApp(index) {
-        let buttons = [...this._taskbarApps.values()];
-        let appButton = buttons[index];
+        const buttons = [...this._taskbarApps.values()];
+        const appButton = buttons[index];
         if (appButton)
             appButton.activateFirstWindow();
     }
@@ -751,15 +751,15 @@ const ScrolledIconList = GObject.registerClass({
     getMinContentWidth(forHeight) {
         // We always want to show one icon, plus we want to keep the padding
         // added by the spacer actor
-        let [minSpacerWidth] = this._spacerBin.get_preferred_width(forHeight);
-        let [minContainerWidth] = this._container.get_preferred_width(forHeight);
+        const [minSpacerWidth] = this._spacerBin.get_preferred_width(forHeight);
+        const [minContainerWidth] = this._container.get_preferred_width(forHeight);
         return this._iconSize + (minSpacerWidth - minContainerWidth);
     }
 
     _updatePage() {
         // Clip the values of the iconOffset
-        let lastIconOffset = this.getNumVisibleAppButtons() - 1;
-        let movableIconsPerPage = this._appsPerPage - 1;
+        const lastIconOffset = this.getNumVisibleAppButtons() - 1;
+        const movableIconsPerPage = this._appsPerPage - 1;
         let iconOffset = Math.max(0, this._iconOffset);
         iconOffset = Math.min(lastIconOffset - movableIconsPerPage, iconOffset);
 
@@ -770,14 +770,14 @@ const ScrolledIconList = GObject.registerClass({
 
         let relativeAnimationTime = ICON_SCROLL_ANIMATION_TIME;
 
-        let iconFullWidth = this._iconSize + this._iconSpacing;
-        let pageSize = this._appsPerPage * iconFullWidth;
-        let hadjustment = this.hscroll.adjustment;
+        const iconFullWidth = this._iconSize + this._iconSpacing;
+        const pageSize = this._appsPerPage * iconFullWidth;
+        const hadjustment = this.hscroll.adjustment;
 
-        let currentOffset = this.hscroll.adjustment.get_value();
-        let targetOffset = Math.min(this._iconOffset * iconFullWidth, hadjustment.upper);
+        const currentOffset = this.hscroll.adjustment.get_value();
+        const targetOffset = Math.min(this._iconOffset * iconFullWidth, hadjustment.upper);
 
-        let distanceToTravel = Math.abs(targetOffset - currentOffset);
+        const distanceToTravel = Math.abs(targetOffset - currentOffset);
         if (distanceToTravel < pageSize)
             relativeAnimationTime = relativeAnimationTime * distanceToTravel / pageSize;
 
@@ -807,7 +807,7 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     calculateNaturalSize(forWidth) {
-        let [numOfPages, appsPerPage] = this._calculateNumberOfPages(forWidth);
+        const [numOfPages, appsPerPage] = this._calculateNumberOfPages(forWidth);
 
         if (this._appsPerPage !== appsPerPage ||
             this._numberOfPages !== numOfPages) {
@@ -817,19 +817,18 @@ const ScrolledIconList = GObject.registerClass({
             this._updatePage();
         }
 
-        let iconFullSize = this._iconSize + this._iconSpacing;
+        const iconFullSize = this._iconSize + this._iconSpacing;
         return this._appsPerPage * iconFullSize - this._iconSpacing;
     }
 
     _updateStyleConstants() {
-        let node = this._container.get_theme_node();
-
+        const node = this._container.get_theme_node();
         this._iconSize = node.get_length('-icon-size');
 
         // The theme will give us an already-scaled size, but both ScrolledIconList and
         // the instances of AppIconButton expect the unscaled versions, since the underlying
         // machinery will scale things later on as needed. Thus, we need to unscale it.
-        let scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+        const scaleFactor = St.ThemeContext.get_for_stage(global.stage).scale_factor;
         this._iconSize /= scaleFactor;
 
         this._taskbarApps.forEach(appButton => {
@@ -840,8 +839,8 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _ensureIsVisible(app) {
-        let apps = [...this._taskbarApps.keys()];
-        let itemIndex = apps.indexOf(app);
+        const apps = [...this._taskbarApps.keys()];
+        const itemIndex = apps.indexOf(app);
         if (itemIndex !== -1)
             this._iconOffset = itemIndex;
 
@@ -856,7 +855,7 @@ const ScrolledIconList = GObject.registerClass({
             return true;
 
         if (app.state === Shell.AppState.RUNNING) {
-            let windows = app.get_windows();
+            const windows = app.get_windows();
             return windows.some(metaWindow => !metaWindow.is_skip_taskbar());
         }
 
@@ -864,7 +863,7 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _reloadFavorites() {
-        let favorites = AppFavorites.getAppFavorites().getFavorites();
+        const favorites = AppFavorites.getAppFavorites().getFavorites();
         for (let i = 0; i < favorites.length; i++)
             this._ensureButton(favorites[i], i);
     }
@@ -874,8 +873,8 @@ const ScrolledIconList = GObject.registerClass({
             return;
 
         if (this._taskbarApps.has(app)) {
-            let appButton = this._taskbarApps.get(app);
-            let appButtonAtIndex = this._container.get_child_at_index(position);
+            const appButton = this._taskbarApps.get(app);
+            const appButtonAtIndex = this._container.get_child_at_index(position);
             if (appButtonAtIndex == appButton)
                 return;
             this._container.set_child_at_index(appButton, position);
@@ -889,8 +888,8 @@ const ScrolledIconList = GObject.registerClass({
         if (this._taskbarApps.has(app) || !this._isAppInteresting(app))
             return;
 
-        let favorites = AppFavorites.getAppFavorites();
-        let newChild = new AppIconButton(app, this._iconSize, this._menuManager, true);
+        const favorites = AppFavorites.getAppFavorites();
+        const newChild = new AppIconButton(app, this._iconSize, this._menuManager, true);
 
         newChild.connect('app-icon-pressed', () => {
             this.emit('app-icon-pressed');
@@ -925,7 +924,7 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _onAppStateChanged(appSys, app) {
-        let state = app.state;
+        const state = app.state;
         switch (state) {
         case Shell.AppState.STARTING:
             if (this._parentalControlsManager &&
@@ -963,14 +962,14 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _calculateNumberOfPages(forWidth) {
-        let minimumIconWidth = this._iconSize + this._iconSpacing;
+        const minimumIconWidth = this._iconSize + this._iconSpacing;
 
         // We need to add one icon space to net width here so that the division
         // takes into account the fact that the last icon does not use iconSpacing
         let iconsPerPage = Math.floor((forWidth + this._iconSpacing) / minimumIconWidth);
         iconsPerPage = Math.max(1, iconsPerPage);
 
-        let pages = Math.ceil(this.getNumVisibleAppButtons() / iconsPerPage);
+        const pages = Math.ceil(this.getNumVisibleAppButtons() / iconsPerPage);
         return [pages, iconsPerPage];
     }
 });
@@ -1011,32 +1010,32 @@ class AppIconBarContainer extends St.Widget {
     }
 
     vfunc_get_preferred_width(forHeight) {
-        let [minBackWidth, natBackWidth] = this._backButton.get_preferred_width(forHeight);
-        let [minForwardWidth, natForwardWidth] = this._forwardButton.get_preferred_width(forHeight);
+        const [minBackWidth, natBackWidth] = this._backButton.get_preferred_width(forHeight);
+        const [minForwardWidth, natForwardWidth] = this._forwardButton.get_preferred_width(forHeight);
 
         // The scrolled icon list actor is a scrolled view with
         // hscrollbar-policy=NONE, so it will take the same width requisition as
         // its child. While we can use the natural one to measure the content,
         // we need a special method to measure the minimum width
-        let minContentWidth = this._scrolledIconList.getMinContentWidth(forHeight);
-        let [, natContentWidth] = this._scrolledIconList.get_preferred_width(forHeight);
+        const minContentWidth = this._scrolledIconList.getMinContentWidth(forHeight);
+        const [, natContentWidth] = this._scrolledIconList.get_preferred_width(forHeight);
 
-        let minSize = minBackWidth + minForwardWidth + 2 * this._spacing + minContentWidth;
-        let naturalSize = natBackWidth + natForwardWidth + 2 * this._spacing + natContentWidth;
+        const minSize = minBackWidth + minForwardWidth + 2 * this._spacing + minContentWidth;
+        const naturalSize = natBackWidth + natForwardWidth + 2 * this._spacing + natContentWidth;
 
         return [minSize, naturalSize];
     }
 
     vfunc_get_preferred_height(forWidth) {
-        let [minListHeight, natListHeight] = this._scrolledIconList.get_preferred_height(forWidth);
-        let [minBackHeight, natBackHeight] = this._backButton.get_preferred_height(forWidth);
-        let [minForwardHeight, natForwardHeight] = this._forwardButton.get_preferred_height(forWidth);
+        const [minListHeight, natListHeight] = this._scrolledIconList.get_preferred_height(forWidth);
+        const [minBackHeight, natBackHeight] = this._backButton.get_preferred_height(forWidth);
+        const [minForwardHeight, natForwardHeight] = this._forwardButton.get_preferred_height(forWidth);
 
-        let minButtonHeight = Math.max(minBackHeight, minForwardHeight);
-        let natButtonHeight = Math.max(natBackHeight, natForwardHeight);
+        const minButtonHeight = Math.max(minBackHeight, minForwardHeight);
+        const natButtonHeight = Math.max(natBackHeight, natForwardHeight);
 
-        let minSize = Math.max(minButtonHeight, minListHeight);
-        let naturalSize = Math.max(natButtonHeight, natListHeight);
+        const minSize = Math.max(minButtonHeight, minListHeight);
+        const naturalSize = Math.max(natButtonHeight, natListHeight);
 
         return [minSize, naturalSize];
     }
@@ -1048,14 +1047,14 @@ class AppIconBarContainer extends St.Widget {
     vfunc_allocate(box) {
         super.vfunc_allocate(box);
 
-        let allocWidth = box.x2 - box.x1;
-        let allocHeight = box.y2 - box.y1;
+        const allocWidth = box.x2 - box.x1;
+        const allocHeight = box.y2 - box.y1;
 
-        let minBackWidth = this._backButton.get_preferred_width(allocHeight)[0];
-        let minForwardWidth = this._forwardButton.get_preferred_width(allocHeight)[0];
-        let maxIconSpace = Math.max(allocWidth - minBackWidth - minForwardWidth - 2 * this._spacing, 0);
+        const minBackWidth = this._backButton.get_preferred_width(allocHeight)[0];
+        const minForwardWidth = this._forwardButton.get_preferred_width(allocHeight)[0];
+        const maxIconSpace = Math.max(allocWidth - minBackWidth - minForwardWidth - 2 * this._spacing, 0);
 
-        let childBox = new Clutter.ActorBox();
+        const childBox = new Clutter.ActorBox();
         childBox.y1 = 0;
         childBox.y2 = allocHeight;
 
@@ -1124,7 +1123,7 @@ class AppIconBar extends PanelMenu.Button {
         this._forwardButton = new AppIconBarNavButton('go-next-symbolic');
         this._forwardButton.connect('clicked', this._nextPageSelected.bind(this));
 
-        let bin = new St.Bin({ name: 'appIconBar' });
+        const bin = new St.Bin({ name: 'appIconBar' });
         this.add_actor(bin);
 
         this._container =
@@ -1169,7 +1168,7 @@ class AppIconBar extends PanelMenu.Button {
     }
 
     _closeActivePanelMenu() {
-        let activeMenu = this._panel.menuManager.activeMenu;
+        const activeMenu = this._panel.menuManager.activeMenu;
         if (activeMenu)
             activeMenu.close(BoxPointer.PopupAnimation.FADE);
     }
@@ -1189,7 +1188,7 @@ class AppIconBar extends PanelMenu.Button {
             return;
         }
 
-        let focusApp = this._windowTracker.focus_app;
+        const focusApp = this._windowTracker.focus_app;
         this._setActiveApp(focusApp);
     }
 
