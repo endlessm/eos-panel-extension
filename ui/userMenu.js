@@ -67,7 +67,7 @@ const UserAccountSection = class extends PopupMenu.PopupMenuSection {
         });
         this._avatar.x_align = Clutter.ActorAlign.CENTER;
 
-        let iconButton = new St.Button({ child: this._avatar });
+        const iconButton = new St.Button({ child: this._avatar });
         this.userIconItem.add_child(iconButton);
 
         iconButton.connect('clicked', () => {
@@ -181,7 +181,7 @@ var UserMenuManager = class {
         this.menu.addMenuItem(this._accountSection);
         this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-        let menuItemsSection = new PopupMenu.PopupMenuSection();
+        const menuItemsSection = new PopupMenu.PopupMenuSection();
         menuItemsSection.box.style_class = 'user-menu-items';
 
         // Control Center
@@ -192,7 +192,7 @@ var UserMenuManager = class {
 
         // Social
         gicon = new Gio.ThemedIcon({ name: 'user-available-symbolic' });
-        let onlineAccountsItem = menuItemsSection.addSettingsAction(ONLINE_ACCOUNTS_TEXT,
+        const onlineAccountsItem = menuItemsSection.addSettingsAction(ONLINE_ACCOUNTS_TEXT,
             ONLINE_ACCOUNTS_PANEL_LAUNCHER);
         // PopupMenuSection.addSettingsAction doesn't support an icon, let's
         // add it manually
@@ -204,14 +204,13 @@ var UserMenuManager = class {
         onlineAccountsItem.add_child(onlineAccountsItem.label);
 
         let app = null;
-        let iconFile = null;
 
         // Feedback
         app = Shell.AppSystem.get_default().lookup_app(FEEDBACK_LAUNCHER);
         if (app) {
-            iconFile = Gio.File.new_for_uri(
+            const file = Gio.File.new_for_uri(
                 `file://${PanelExtension.path}/data/icons/feedback-symbolic.svg`);
-            gicon = new Gio.FileIcon({ file: iconFile });
+            gicon = new Gio.FileIcon({ file });
             menuItemsSection.addAction(FEEDBACK_TEXT, () => {
                 this._launchApplication(FEEDBACK_LAUNCHER);
             }, gicon);
@@ -221,9 +220,9 @@ var UserMenuManager = class {
         app = Shell.AppSystem.get_default().lookup_app(HELP_CENTER_LAUNCHER) ||
               Shell.AppSystem.get_default().lookup_app(HELP_CENTER_LAUNCHER_ALT);
         if (app) {
-            iconFile = Gio.File.new_for_uri(
+            const file = Gio.File.new_for_uri(
                 `file://${PanelExtension.path}/data/icons/endless-help-symbolic.svg`);
-            gicon = new Gio.FileIcon({ file: iconFile });
+            gicon = new Gio.FileIcon({ file });
             menuItemsSection.addAction(HELP_CENTER_TEXT, () => {
                 this._launchApplication(app.get_id());
             }, gicon);
@@ -241,7 +240,7 @@ var UserMenuManager = class {
         this.menu.close(BoxPointer.PopupAnimation.NONE);
         Main.overview.hide();
 
-        let app = Shell.AppSystem.get_default().lookup_app(launcherName);
+        const app = Shell.AppSystem.get_default().lookup_app(launcherName);
         app.activate_full(-1, global.get_current_time());
     }
 
@@ -262,7 +261,7 @@ class UserMenu extends PanelMenu.Button {
 
         this.accessible_role = Atk.Role.MENU;
 
-        let menuLayout = new Panel.AggregateLayout();
+        const menuLayout = new Panel.AggregateLayout();
         this.menu.box.set_layout_manager(menuLayout);
         this.menu.actor.add_style_class_name('aggregate-menu');
 
