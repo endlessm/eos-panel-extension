@@ -19,6 +19,11 @@
 
 const { GObject } = imports.gi;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const PanelExtension = ExtensionUtils.getCurrentExtension();
+
+const LayoutManagerWrapper = PanelExtension.imports.ui.layout;
+
 var PanelManager = GObject.registerClass(
 class PanelManager extends GObject.Object {
     _init() {
@@ -28,10 +33,20 @@ class PanelManager extends GObject.Object {
     }
 
     enable() {
+        if (this.enabled)
+            return;
+
+        LayoutManagerWrapper.enable();
+
         this.enabled = true;
     }
 
     disable() {
+        if (!this.enabled)
+            return;
+
+        LayoutManagerWrapper.disable();
+
         this.enabled = false;
     }
 });
