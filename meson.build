@@ -9,6 +9,7 @@ sources = [
 ]
 ui_sources = [
   'ui/endlessButton.js',
+  'ui/hotCorner.js',
   'ui/layout.js',
   'ui/overview.js',
   'ui/panel.js',
@@ -18,6 +19,8 @@ ui_sources = [
 ]
 icons = [
   'data/icons/endless-button-symbolic.svg',
+  'data/icons/hot-corner-symbolic.svg',
+  'data/icons/hot-corner-rtl-symbolic.svg',
 ]
 extra_data = [
   'COPYING',
