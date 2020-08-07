@@ -8,6 +8,7 @@ sources = [
   'utils.js',
 ]
 ui_sources = [
+  'ui/appIconBar.js',
   'ui/endlessButton.js',
   'ui/hotCorner.js',
   'ui/layout.js',
