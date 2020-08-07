@@ -18,25 +18,25 @@
  */
 
 function override(object, methodName, callback) {
-    if (!object._fnOverrides)
-        object._fnOverrides = {};
+    if (!object._panelFnOverrides)
+        object._panelFnOverrides = {};
 
     const baseObject = object.prototype || object;
     const originalMethod = baseObject[methodName];
-    object._fnOverrides[methodName] = originalMethod;
+    object._panelFnOverrides[methodName] = originalMethod;
     baseObject[methodName] = callback;
 }
 
 function restore(object) {
     const baseObject = object.prototype || object;
-    if (object._fnOverrides) {
-        Object.keys(object._fnOverrides).forEach(k => {
-            baseObject[k] = object._fnOverrides[k];
+    if (object._panelFnOverrides) {
+        Object.keys(object._panelFnOverrides).forEach(k => {
+            baseObject[k] = object._panelFnOverrides[k];
         });
-        delete object._fnOverrides;
+        delete object._panelFnOverrides;
     }
 }
 
 function original(object, methodName) {
-    return object._fnOverrides[methodName];
+    return object._panelFnOverrides[methodName];
 }
