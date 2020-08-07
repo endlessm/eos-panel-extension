@@ -63,6 +63,7 @@ class EndlessButton extends SingleIconButton {
         const hidingId = Main.overview.connect('hiding', this._onOverviewHiding.bind(this));
 
         this.connect('destroy', () => {
+            this._label.destroy();
             Main.overview.disconnect(pageChangedId);
             Main.overview.disconnect(showingId);
             Main.overview.disconnect(hidingId);
