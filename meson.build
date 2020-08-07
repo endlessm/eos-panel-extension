@@ -9,6 +9,7 @@ sources = [
 ]
 ui_sources = [
   'ui/appIconBar.js',
+  'ui/automaticUpdates.js',
   'ui/endlessButton.js',
   'ui/hotCorner.js',
   'ui/layout.js',
@@ -23,12 +24,18 @@ ui_sources = [
   'ui/workspaceMonitor.js',
 ]
 icons = [
+  'data/icons/endless-auto-updates-off-symbolic.svg',
+  'data/icons/endless-auto-updates-on-symbolic.svg',
+  'data/icons/endless-auto-updates-scheduled-symbolic.svg',
   'data/icons/endless-button-symbolic.svg',
   'data/icons/endless-help-symbolic.svg',
   'data/icons/feedback-symbolic.svg',
   'data/icons/hot-corner-symbolic.svg',
   'data/icons/hot-corner-rtl-symbolic.svg',
   'data/icons/mini-icon-active-indicator.png',
+]
+dbus_interfaces = [
+  'data/dbus-interfaces/com.endlessm.DownloadManager1.Scheduler.xml',
 ]
 extra_data = [
   'COPYING',
@@ -44,6 +51,7 @@ extensiondir = join_paths(datadir, 'gnome-shell', 'extensions', uuid)
 schemadir = join_paths(extensiondir, 'schemas')
 uidir = join_paths(extensiondir, 'ui')
 iconsdir = join_paths(extensiondir, 'data', 'icons')
+dbusinterfacesdir = join_paths(extensiondir, 'data', 'dbus-interfaces')
 
 metaconf = configuration_data()
 metaconf.set('uuid', uuid)
@@ -66,6 +74,10 @@ install_data(ui_sources,
 
 install_data(icons,
   install_dir: iconsdir
+)
+
+install_data(dbus_interfaces,
+  install_dir: dbusinterfacesdir
 )
 
 install_data(extra_data,
