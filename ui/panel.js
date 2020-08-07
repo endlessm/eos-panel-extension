@@ -24,12 +24,47 @@ const Panel = imports.ui.panel;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
+const AppIconBar = PanelExtension.imports.ui.appIconBar;
+const EndlessButton = PanelExtension.imports.ui.endlessButton;
+const HotCorner = PanelExtension.imports.ui.hotCorner;
+const PowerButton = PanelExtension.imports.ui.powerButton;
+const SystemMenu = PanelExtension.imports.ui.systemMenu;
+const UserMenu = PanelExtension.imports.ui.userMenu;
 const Utils = PanelExtension.imports.utils;
 
 const EXTRA_PANEL_ITEM_IMPLEMENTATIONS = {
+    'appIconBar': AppIconBar.AppIconBar,
+    'endlessButton': EndlessButton.EndlessButton,
+    'hotCorner': HotCorner.HotCorner,
+    'powerButton': PowerButton.PowerButton,
+    'systemMenu': SystemMenu.SystemMenu,
+    'userMenu': UserMenu.UserMenu,
 };
 
 const _panelModes = {
+    'user': {
+        panel: {
+            left: ['endlessButton', 'appIconBar'],
+            center: [],
+            right: ['dwellClick', 'a11y', 'keyboard', 'systemMenu',
+                    'dateMenu', 'userMenu', 'hotCorner'],
+        },
+    },
+    'unlock-dialog': {
+        panel: {
+            left: [],
+            center: [],
+            right: ['dwellClick', 'a11y', 'keyboard', 'systemMenu'],
+        },
+    },
+    'gdm': {
+        panel: {
+            left: [],
+            center: [],
+            right: ['dwellClick', 'a11y', 'keyboard', 'systemMenu',
+                    'powerButton'],
+        },
+    },
 };
 
 let _extraIndicators = [];
