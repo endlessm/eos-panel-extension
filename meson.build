@@ -11,6 +11,7 @@ ui_sources = [
   'ui/layout.js',
   'ui/panel.js',
   'ui/panelManager.js',
+  'ui/workspaceMonitor.js',
 ]
 extra_data = [
   'COPYING',
