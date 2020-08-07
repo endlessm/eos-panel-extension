@@ -98,5 +98,23 @@ class SystemMenu extends PanelMenu.Button {
 
         menuLayout.addSizeChild(this._rfkill.menu.actor);
         menuLayout.addSizeChild(this._power.menu.actor);
+
+        this._sessionModeUpdatedId = Main.sessionMode.connect('updated',
+            this._sessionUpdated.bind(this));
+        this._sessionUpdated();
+    }
+
+    _sessionUpdated() {
+        // Update volume state when session is updated
+        this._volume._volumeMenu._onControlStateChanged();
+    }
+
+    _onDestroy() {
+        super._onDestroy();
+
+        if (this._sessionModeUpdatedId) {
+            Main.sessionMode.disconnect(this._sessionModeUpdatedId);
+            this._sessionModeUpdatedId = 0;
+        }
     }
 });
