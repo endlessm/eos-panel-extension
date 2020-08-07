@@ -15,10 +15,13 @@ ui_sources = [
   'ui/panel.js',
   'ui/panelManager.js',
   'ui/panelMenu.js',
+  'ui/userMenu.js',
   'ui/workspaceMonitor.js',
 ]
 icons = [
   'data/icons/endless-button-symbolic.svg',
+  'data/icons/endless-help-symbolic.svg',
+  'data/icons/feedback-symbolic.svg',
   'data/icons/hot-corner-symbolic.svg',
   'data/icons/hot-corner-rtl-symbolic.svg',
 ]
