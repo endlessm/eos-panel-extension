@@ -301,11 +301,8 @@ const AppIconButton = GObject.registerClass({
             this._unpinMenuItem = this._rightClickMenu.addAction(_('Unpin from Taskbar'), () => {
                 // Unpin from taskbar in idle, so that we can avoid destroying
                 // the menu actor before it's closed
-                GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
-                    this._menu.destroy();
-
+                this._unpinIdleId = GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
                     this.emit('app-icon-unpinned');
-
                     return GLib.SOURCE_REMOVE;
                 });
             });
@@ -350,6 +347,7 @@ const AppIconButton = GObject.registerClass({
 
     _onDestroy() {
         this._label.destroy();
+        this._menu.destroy();
         this._resetIconGeometry();
 
         if (this._startupCompleteId) {
@@ -360,6 +358,11 @@ const AppIconButton = GObject.registerClass({
         if (this._appStateUpdatedId) {
             this._app.disconnect(this._appStateUpdatedId);
             this._appStateUpdatedId = 0;
+        }
+
+        if (this._unpinIdleId) {
+            GLib.source_remove(this._unpinMenuItem);
+            this._unpinIdleId = 0;
         }
     }
 
@@ -901,6 +904,9 @@ const ScrolledIconList = GObject.registerClass({
                 newChild.destroy();
                 this._taskbarApps.delete(app);
                 this._updatePage();
+            } else {
+                this._container.set_child_at_index(newChild,
+                    this._taskbarApps.size);
             }
         });
         this._taskbarApps.set(app, newChild);
