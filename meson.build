@@ -8,12 +8,16 @@ sources = [
   'utils.js',
 ]
 ui_sources = [
+  'ui/endlessButton.js',
   'ui/layout.js',
   'ui/overview.js',
   'ui/panel.js',
   'ui/panelManager.js',
   'ui/panelMenu.js',
   'ui/workspaceMonitor.js',
+]
+icons = [
+  'data/icons/endless-button-symbolic.svg',
 ]
 extra_data = [
   'COPYING',
@@ -28,6 +32,7 @@ datadir = get_option('datadir')
 extensiondir = join_paths(datadir, 'gnome-shell', 'extensions', uuid)
 schemadir = join_paths(extensiondir, 'schemas')
 uidir = join_paths(extensiondir, 'ui')
+iconsdir = join_paths(extensiondir, 'data', 'icons')
 
 metaconf = configuration_data()
 metaconf.set('uuid', uuid)
@@ -46,6 +51,10 @@ install_data(sources,
 
 install_data(ui_sources,
   install_dir: uidir
+)
+
+install_data(icons,
+  install_dir: iconsdir
 )
 
 install_data(extra_data,
