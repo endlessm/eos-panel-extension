@@ -185,7 +185,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _sessionUpdated() {
-        let sensitive = !Main.sessionMode.isLocked && !Main.sessionMode.isGreeter;
+        const sensitive = !Main.sessionMode.isLocked && !Main.sessionMode.isGreeter;
         this.menu.setSensitive(sensitive);
         this._sync();
     }
@@ -229,7 +229,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         this._updateAutomaticUpdatesItem();
 
         // Icons
-        let icon = this._getIcon();
+        const icon = this._getIcon();
 
         this._item.icon.gicon = icon;
         this.gicon = icon;
@@ -245,8 +245,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _updateActiveConnection() {
-        let currentActiveConnection = this._getActiveConnection();
-
+        const currentActiveConnection = this._getActiveConnection();
         if (this._activeConnection === currentActiveConnection)
             return;
 
@@ -277,12 +276,12 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         if (this._state === AutomaticUpdatesState.UNKNOWN)
             return;
 
-        let alreadySentNotification = this._alreadySentNotification();
-        let newState = this._getState();
+        const alreadySentNotification = this._alreadySentNotification();
+        const newState = this._getState();
 
-        let wasDisconnected = this._state === AutomaticUpdatesState.DISCONNECTED;
-        let wasActive = this._state >= AutomaticUpdatesState.IDLE;
-        let isActive = newState >= AutomaticUpdatesState.IDLE;
+        const wasDisconnected = this._state === AutomaticUpdatesState.DISCONNECTED;
+        const wasActive = this._state >= AutomaticUpdatesState.IDLE;
+        const isActive = newState >= AutomaticUpdatesState.IDLE;
 
         // The criteria to notify about the Automatic Updates setting is:
         //   1. If the user was disconnected and connects to a new network; or
@@ -297,7 +296,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         if (newState === AutomaticUpdatesState.DISCONNECTED)
             return;
 
-        let source = new MessageTray.SystemNotificationSource();
+        const source = new MessageTray.SystemNotificationSource();
         Main.messageTray.add(source);
 
         // Figure out the title, subtitle and icon
@@ -313,7 +312,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
             iconFile = _getIconForState(AutomaticUpdatesState.DISABLED);
         }
 
-        let gicon = new Gio.FileIcon({ file: Gio.File.new_for_uri(iconFile) });
+        const gicon = new Gio.FileIcon({ file: Gio.File.new_for_uri(iconFile) });
 
         // Create the notification.
         // The first time we notify the user for a given connection,
@@ -334,7 +333,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         });
 
         this._notification.addAction(_('Change Settings…'), () => {
-            let app = Shell.AppSystem.get_default().lookup_app(
+            const app = Shell.AppSystem.get_default().lookup_app(
                 UPDATES_PANEL_LAUNCHER);
             Main.overview.hide();
             app.activate();
@@ -347,7 +346,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         });
 
         // Now that we first detected this connection, mark it as such
-        let userSetting = this._ensureUserSetting(this._activeConnection);
+        const userSetting = this._ensureUserSetting(this._activeConnection);
         userSetting.set_data(
             NM_SETTING_AUTOMATIC_UPDATES_NOTIFICATION_TIME,
             '%s'.format(GLib.get_real_time()));
@@ -356,7 +355,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _updateAutomaticUpdatesItem() {
-        let state = this._getState();
+        const state = this._getState();
 
         if (state === AutomaticUpdatesState.DISABLED)
             this._toggleItem.label.text = _('Turn On');
@@ -368,9 +367,9 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         if (!this._activeConnection)
             return;
 
-        let userSetting = this._ensureUserSetting(this._activeConnection);
+        const userSetting = this._ensureUserSetting(this._activeConnection);
 
-        let state = this._getState();
+        const state = this._getState();
         let value;
 
         if (state === AutomaticUpdatesState.IDLE ||
@@ -398,8 +397,8 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _getIcon() {
-        let state = this._getState();
-        let iconFile = _getIconForState(state);
+        const state = this._getState();
+        const iconFile = _getIconForState(state);
         if (!iconFile)
             return null;
 
@@ -407,7 +406,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _updateVisibility() {
-        let state = this._getState();
+        const state = this._getState();
 
         this._item.visible = state !== AutomaticUpdatesState.DISCONNECTED;
         this.visible = state === AutomaticUpdatesState.DOWNLOADING;
@@ -417,29 +416,28 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         if (!this._activeConnection)
             return AutomaticUpdatesState.DISCONNECTED;
 
-        let userSetting = this._ensureUserSetting(this._activeConnection);
+        const userSetting = this._ensureUserSetting(this._activeConnection);
 
         // We only return true when:
         //  * Automatic Updates are on
         //  * A schedule was set
         //  * Something is being downloaded
 
-        let allowDownloadsValue = userSetting.get_data(NM_SETTING_ALLOW_DOWNLOADS);
+        const allowDownloadsValue = userSetting.get_data(NM_SETTING_ALLOW_DOWNLOADS);
         if (allowDownloadsValue) {
-            let allowDownloads = allowDownloadsValue === '1';
-
+            const allowDownloads = allowDownloadsValue === '1';
             if (!allowDownloads)
                 return AutomaticUpdatesState.DISABLED;
         } else {
             // Guess the default value from the metered state. Only return
             // if it's disabled - if it's not, we want to follow the regular
             // code paths and fetch the correct state
-            let connectionSetting = this._activeConnection.get_setting_connection();
+            const connectionSetting = this._activeConnection.get_setting_connection();
 
             if (!connectionSetting)
                 return AutomaticUpdatesState.DISABLED;
 
-            let metered = connectionSetting.get_metered();
+            const metered = connectionSetting.get_metered();
             if (metered === NM.Metered.YES || metered === NM.Metered.GUESS_YES)
                 return AutomaticUpdatesState.DISABLED;
         }
@@ -448,17 +446,17 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         if (!this._proxy)
             return AutomaticUpdatesState.UNKNOWN;
 
-        let scheduleSet = userSetting.get_data(NM_SETTING_TARIFF_ENABLED) === '1';
+        const scheduleSet = userSetting.get_data(NM_SETTING_TARIFF_ENABLED) === '1';
         if (!scheduleSet)
             return AutomaticUpdatesState.IDLE;
 
-        let downloading = this._proxy.ActiveEntryCount > 0;
+        const downloading = this._proxy.ActiveEntryCount > 0;
         if (downloading)
             return AutomaticUpdatesState.DOWNLOADING;
 
         // At this point we're not downloading anything, but something
         // might be queued
-        let downloadsQueued = this._proxy.EntryCount > 0;
+        const downloadsQueued = this._proxy.EntryCount > 0;
         if (downloadsQueued)
             return AutomaticUpdatesState.SCHEDULED;
         else
@@ -466,12 +464,11 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _alreadySentNotification() {
-        let connection = this._getActiveConnection();
+        const connection = this._getActiveConnection();
         if (!connection)
             return false;
 
-        let userSetting = connection.get_setting(NM.SettingUser.$gtype);
-
+        const userSetting = connection.get_setting(NM.SettingUser.$gtype);
         if (!userSetting)
             return false;
 
@@ -479,7 +476,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _getActiveConnection() {
-        let activeConnection = this._client.get_primary_connection();
+        const activeConnection = this._client.get_primary_connection();
         return activeConnection ? activeConnection.get_connection() : null;
     }
 });
