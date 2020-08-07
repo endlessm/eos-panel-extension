@@ -28,6 +28,7 @@ const PopupMenu = imports.ui.popupMenu;
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 
+const AutomaticUpdates = PanelExtension.imports.ui.automaticUpdates;
 const Power = PanelExtension.imports.ui.power;
 
 var SystemMenu = GObject.registerClass(
@@ -62,10 +63,12 @@ class SystemMenu extends PanelMenu.Button {
         this._volume = new imports.ui.status.volume.Indicator();
         this._brightness = new imports.ui.status.brightness.Indicator();
         this._nightLight = new imports.ui.status.nightLight.Indicator();
+        this._automaticUpdates = new AutomaticUpdates.Indicator();
         this._thunderbolt = new imports.ui.status.thunderbolt.Indicator();
 
         this._indicators.add_child(this._thunderbolt);
         this._indicators.add_child(this._nightLight);
+        this._indicators.add_child(this._automaticUpdates);
         if (this._network)
             this._indicators.add_child(this._network);
         if (this._bluetooth)
@@ -80,6 +83,8 @@ class SystemMenu extends PanelMenu.Button {
 
         if (this._network)
             this.menu.addMenuItem(this._network.menu);
+
+        this.menu.addMenuItem(this._automaticUpdates.menu);
 
         if (this._bluetooth)
             this.menu.addMenuItem(this._bluetooth.menu);
