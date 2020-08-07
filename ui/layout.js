@@ -33,7 +33,7 @@ function enable() {
             this._rightPanelBarrier = null;
         }
 
-        let monitor = this.primaryMonitor;
+        const monitor = this.primaryMonitor;
         if (!monitor)
             return;
 
@@ -54,7 +54,7 @@ function enable() {
         const original = Utils.original(Layout.LayoutManager, '_updateBoxes');
         original.bind(this)();
 
-        let monitor = this.primaryMonitor;
+        const monitor = this.primaryMonitor;
         if (!monitor)
             return;
 
@@ -62,7 +62,7 @@ function enable() {
             monitor.y + monitor.height - this.panelBox.height);
     });
 
-    let layoutManager = Main.layoutManager;
+    const layoutManager = Main.layoutManager;
     layoutManager._updateBoxes();
     layoutManager._updatePanelBarrier();
 }
@@ -70,7 +70,7 @@ function enable() {
 function disable() {
     Utils.restore(Layout.LayoutManager);
 
-    let layoutManager = Main.layoutManager;
+    const layoutManager = Main.layoutManager;
     layoutManager._updateBoxes();
     layoutManager._updatePanelBarrier();
 }
