@@ -1,7 +1,7 @@
 {
   "uuid": "@uuid@",
-  "name": "Endless OS Desktop Panel",
-  "description": "Endless OS Desktop Panel",
+  "name": "Endless Desktop Panel",
+  "description": "Endless OS signature desktop panel",
   "settings-schema": "@settings_schema@",
   "shell-version": [
     "3.38"
