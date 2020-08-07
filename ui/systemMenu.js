@@ -25,6 +25,11 @@ const Panel = imports.ui.panel;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const PanelExtension = ExtensionUtils.getCurrentExtension();
+
+const Power = PanelExtension.imports.ui.power;
+
 var SystemMenu = GObject.registerClass(
 class SystemMenu extends PanelMenu.Button {
     _init() {
@@ -56,7 +61,7 @@ class SystemMenu extends PanelMenu.Button {
             this._bluetooth = null;
 
         this._remoteAccess = new imports.ui.status.remoteAccess.RemoteAccessApplet();
-        this._power = new imports.ui.status.power.Indicator();
+        this._power = new Power.Indicator();
         this._rfkill = new imports.ui.status.rfkill.Indicator();
         this._volume = new imports.ui.status.volume.Indicator();
         this._brightness = new imports.ui.status.brightness.Indicator();
