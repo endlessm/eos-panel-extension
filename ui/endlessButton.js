@@ -41,9 +41,9 @@ class EndlessButton extends SingleIconButton {
         this.connect('button-press-event', this._onButtonPressEvent.bind(this));
         this.connect('button-release-event', this._onButtonReleaseEvent.bind(this));
 
-        let iconFile = Gio.File.new_for_uri(
+        const file = Gio.File.new_for_uri(
             `file://${PanelExtension.path}/data/icons/endless-button-symbolic.svg`);
-        this.setIcon(new Gio.FileIcon({ file: iconFile }));
+        this.setIcon(new Gio.FileIcon({ file }));
 
         this._setupTooltipText();
     }
@@ -58,9 +58,9 @@ class EndlessButton extends SingleIconButton {
             this._labelOffsetY = this._label.get_theme_node().get_length('-label-offset-y');
         });
 
-        let pageChangedId = Main.overview.connect('page-changed', this._onOverviewPageChanged.bind(this));
-        let showingId = Main.overview.connect('showing', this._onOverviewShowing.bind(this));
-        let hidingId = Main.overview.connect('hiding', this._onOverviewHiding.bind(this));
+        const pageChangedId = Main.overview.connect('page-changed', this._onOverviewPageChanged.bind(this));
+        const showingId = Main.overview.connect('showing', this._onOverviewShowing.bind(this));
+        const hidingId = Main.overview.connect('hiding', this._onOverviewHiding.bind(this));
 
         this.connect('destroy', () => {
             Main.overview.disconnect(pageChangedId);
@@ -72,13 +72,11 @@ class EndlessButton extends SingleIconButton {
     }
 
     _updateHoverLabel(hiding) {
-        let viewSelector = Main.overview.viewSelector;
-        let showingDesktop = true;
-
-        if (!hiding &&
-            viewSelector &&
-            viewSelector.getActivePage() === ViewSelector.ViewPage.APPS)
-            showingDesktop = false;
+        const viewSelector = Main.overview.viewSelector;
+        const showingDesktop =
+            hiding ||
+            !viewSelector ||
+            viewSelector.getActivePage() !== ViewSelector.ViewPage.APPS;
 
         this._setHoverLabelText(showingDesktop);
     }
@@ -123,8 +121,8 @@ class EndlessButton extends SingleIconButton {
             Main.uiGroup.set_child_above_sibling(this._label, null);
 
             // Update the tooltip position
-            let monitor = Main.layoutManager.findMonitorForActor(this._label);
-            let iconMidpoint = this.get_transformed_position()[0] + this.width / 2;
+            const monitor = Main.layoutManager.findMonitorForActor(this._label);
+            const iconMidpoint = this.get_transformed_position()[0] + this.width / 2;
             this._label.translation_x = Math.floor(iconMidpoint - this._label.width / 2) + this._labelOffsetX;
             this._label.translation_y = Math.floor(this.get_transformed_position()[1] - this._labelOffsetY);
 
