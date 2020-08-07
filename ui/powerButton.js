@@ -36,7 +36,7 @@ class PowerButton extends SingleIconButton {
 
         this._session = new GnomeSession.SessionManager();
 
-        let icon = new Gio.ThemedIcon({ name: 'system-shutdown-symbolic' });
+        const icon = new Gio.ThemedIcon({ name: 'system-shutdown-symbolic' });
         this.setIcon(icon, Panel.PANEL_ICON_SIZE);
 
         this.add_style_class_name('power-button');
