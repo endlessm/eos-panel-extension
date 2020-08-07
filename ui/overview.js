@@ -20,11 +20,70 @@
 const { Clutter, GLib, GObject, Meta, Pango, St } = imports.gi;
 
 const Main = imports.ui.main;
+const ModalDialog = imports.ui.modalDialog;
+const Overview = imports.ui.overview;
 const ViewSelector = imports.ui.viewSelector;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
+const Utils = PanelExtension.imports.utils;
 const WorkspaceMonitor = PanelExtension.imports.ui.workspaceMonitor;
+
+const NO_WINDOWS_OPEN_DIALOG_TIMEOUT = 2000; // ms
+
+var NoWindowsDialog = GObject.registerClass(
+class NoWindowsDialog extends ModalDialog.ModalDialog {
+    _init() {
+        super._init({
+            styleClass: 'prompt-dialog',
+            shellReactive: true,
+            destroyOnClose: false,
+        });
+
+        this._timeoutId = 0;
+
+        let descriptionLabel = new St.Label({
+            style_class: 'prompt-dialog-headline headline',
+            text: _('No apps are open'),
+            x_expand: true,
+            x_align: Clutter.ActorAlign.CENTER,
+        });
+        descriptionLabel.clutter_text.line_wrap = true;
+        descriptionLabel.clutter_text.ellipsize = Pango.EllipsizeMode.NONE;
+
+        this.contentLayout.add_child(descriptionLabel);
+
+        this.connect('key-press-event', () => {
+            this.close(global.get_current_time());
+            return Clutter.EVENT_PROPAGATE;
+        });
+    }
+
+    popup() {
+        if (this._timeoutId !== 0)
+            GLib.source_remove(this._timeoutId);
+
+        this._timeoutId =
+            GLib.timeout_add(
+                GLib.PRIORITY_DEFAULT,
+                NO_WINDOWS_OPEN_DIALOG_TIMEOUT,
+                () => {
+                    this.popdown();
+                    return GLib.SOURCE_REMOVE;
+                });
+        this.open(global.get_current_time());
+    }
+
+    popdown() {
+        if (this._timeoutId !== 0) {
+            GLib.source_remove(this._timeoutId);
+            this._timeoutId = 0;
+        }
+        this.close(global.get_current_time());
+    }
+});
+
+let _noWindowsDialog = null;
 
 function pageFromViewPage(viewSelector, viewPage) {
     let page;
@@ -71,7 +130,14 @@ function toggleApps(overview) {
         return;
     }
 
+    if (!WorkspaceMonitor.hasActiveWindows()) {
+        _noWindowsDialog.popup();
+        return;
+    }
+
     if (!WorkspaceMonitor.hasVisibleWindows()) {
+        // There are active windows but all of them are hidden, so activate
+        // the most recently used one before hiding the overview.
         let appSystem = Shell.AppSystem.get_default();
         let runningApps = appSystem.get_running();
         if (runningApps.length > 0)
@@ -91,12 +157,19 @@ function toggleWindows(overview) {
         return;
     }
 
+    if (!WorkspaceMonitor.hasActiveWindows()) {
+        _noWindowsDialog.popup();
+        return;
+    }
+
     if (overview.viewSelector.getActivePage() !== ViewSelector.ViewPage.WINDOWS) {
         _showWindows(overview);
         return;
     }
 
     if (!WorkspaceMonitor.hasVisibleWindows()) {
+        // There are active windows but all of them are
+        // hidden, so we get back to show the icons grid.
         _showApps(overview);
         return;
     }
@@ -106,7 +179,37 @@ function toggleWindows(overview) {
 }
 
 function enable() {
+    _noWindowsDialog = new NoWindowsDialog();
+
+    Utils.override(Overview.Overview, 'hide', function() {
+        const original = Utils.original(Overview.Overview, 'hide');
+        original.bind(this)();
+
+        if (this.isDummy)
+            return;
+
+        if (!this._shown)
+            return;
+
+        let event = Clutter.get_current_event();
+        if (event) {
+            let type = event.type();
+            let button = type == Clutter.EventType.BUTTON_PRESS ||
+                          type == Clutter.EventType.BUTTON_RELEASE;
+            let ctrl = (event.get_state() & Clutter.ModifierType.CONTROL_MASK) != 0;
+            if (button && ctrl)
+                return;
+        }
+
+        _noWindowsDialog.popdown();
+    });
 }
 
 function disable() {
+    Utils.restore(Overview.Overview);
+
+    if (_noWindowsDialog) {
+        _noWindowsDialog.destroy();
+        _noWindowsDialog = null;
+    }
 }
