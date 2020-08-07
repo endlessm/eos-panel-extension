@@ -44,10 +44,6 @@ class SystemMenu extends PanelMenu.Button {
             y_align: Clutter.ActorAlign.CENTER,
         });
 
-        let userMode = Main.sessionMode.hasOverview;
-        if (userMode)
-            this._indicators.add_style_class_name('user-mode-indicators-box');
-
         this.add_child(this._indicators);
 
         if (Config.HAVE_NETWORKMANAGER)
@@ -79,8 +75,8 @@ class SystemMenu extends PanelMenu.Button {
         this._indicators.add_child(this._volume);
         this._indicators.add_child(this._brightness);
         this._indicators.add_child(this._power);
-        if (!userMode)
-            this._indicators.add_child(PopupMenu.arrowIcon(St.Side.BOTTOM));
+        this._arrowIcon = PopupMenu.arrowIcon(St.Side.BOTTOM);
+        this._indicators.add_child(this._arrowIcon);
 
         if (this._network)
             this.menu.addMenuItem(this._network.menu);
@@ -107,6 +103,13 @@ class SystemMenu extends PanelMenu.Button {
     _sessionUpdated() {
         // Update volume state when session is updated
         this._volume._volumeMenu._onControlStateChanged();
+
+        let userMode = Main.sessionMode.hasOverview;
+        if (userMode)
+            this._indicators.add_style_class_name('user-mode-indicators-box');
+        else
+            this._indicators.remove_style_class_name('user-mode-indicators-box');
+        this._arrowIcon.visible = !userMode;
     }
 
     _onDestroy() {
