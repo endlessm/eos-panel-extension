@@ -42,7 +42,7 @@ class NoWindowsDialog extends ModalDialog.ModalDialog {
 
         this._timeoutId = 0;
 
-        let descriptionLabel = new St.Label({
+        const descriptionLabel = new St.Label({
             style_class: 'prompt-dialog-headline headline',
             text: _('No apps are open'),
             x_expand: true,
@@ -138,8 +138,8 @@ function toggleApps(overview) {
     if (!WorkspaceMonitor.hasVisibleWindows()) {
         // There are active windows but all of them are hidden, so activate
         // the most recently used one before hiding the overview.
-        let appSystem = Shell.AppSystem.get_default();
-        let runningApps = appSystem.get_running();
+        const appSystem = Shell.AppSystem.get_default();
+        const runningApps = appSystem.get_running();
         if (runningApps.length > 0)
             runningApps[0].activate();
     }
@@ -191,12 +191,12 @@ function enable() {
         if (!this._shown)
             return;
 
-        let event = Clutter.get_current_event();
+        const event = Clutter.get_current_event();
         if (event) {
-            let type = event.type();
-            let button = type == Clutter.EventType.BUTTON_PRESS ||
-                          type == Clutter.EventType.BUTTON_RELEASE;
-            let ctrl = (event.get_state() & Clutter.ModifierType.CONTROL_MASK) != 0;
+            const type = event.type();
+            const button = type == Clutter.EventType.BUTTON_PRESS ||
+                           type == Clutter.EventType.BUTTON_RELEASE;
+            const ctrl = (event.get_state() & Clutter.ModifierType.CONTROL_MASK) != 0;
             if (button && ctrl)
                 return;
         }
