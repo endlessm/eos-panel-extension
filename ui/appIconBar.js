@@ -645,6 +645,11 @@ const ScrolledIconList = GObject.registerClass({
 
         this._taskbarApps = new Map();
 
+        let appFavorites = AppFavorites.getAppFavorites();
+        let favorites = appFavorites.getFavorites();
+        for (let favorite of favorites)
+            this._addButton(favorite);
+
         // Update for any apps running before the system started
         // (after a crash or a restart)
         let currentlyRunning = appSys.get_running();
@@ -653,23 +658,22 @@ const ScrolledIconList = GObject.registerClass({
             let app = currentlyRunning[i];
             // Most apps have a single PID; ignore all but the first
             let pid = app.get_pids()[0];
-            appsByPid.push({
-                pid,
-                app,
-            });
+            appsByPid.push({ pid, app });
         }
-
-        let favorites = AppFavorites.getAppFavorites().getFavorites();
-        for (let favorite of favorites)
-            this._addButtonAnimated(favorite);
 
         // Sort numerically by PID
         // This preserves the original app order, until the maximum PID
         // value is reached and older PID values are recycled
         let sortedPids = appsByPid.sort((a, b) => a.pid - b.pid);
         for (let sortedPid of sortedPids)
-            this._addButtonAnimated(sortedPid.app);
+            this._addButton(sortedPid.app);
 
+        this._appFavoritesChangedId = appFavorites.connect('changed',
+            this._reloadFavorites.bind(this));
+        this._appInstalledChangedId = appSys.connect('installed-changed', () => {
+            AppFavorites.getAppFavorites().reload();
+            this._reloadFavorites();
+        });
         this._appStateChangedId = appSys.connect('app-state-changed',
             this._onAppStateChanged.bind(this));
 
@@ -688,6 +692,18 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _onDestroy() {
+        if (this._appFavoritesChangedId) {
+            let appFavorites = AppFavorites.getAppFavorites();
+            appFavorites.disconnect(this._appFavoritesChangedId);
+            this._appFavoritesChangedId = 0;
+        }
+
+        if (this._appInstalledChangedId) {
+            let appSys = Shell.AppSystem.get_default();
+            appSys.disconnect(this._appInstalledChangedId);
+            this._appInstalledChangedId = 0;
+        }
+
         if (this._appStateChangedId) {
             let appSys = Shell.AppSystem.get_default();
             appSys.disconnect(this._appStateChangedId);
@@ -844,28 +860,29 @@ const ScrolledIconList = GObject.registerClass({
         return false;
     }
 
-    _getIconButtonForActor(actor) {
-        for (let appIconButton of this._taskbarApps.values()) {
-            if (appIconButton !== null && appIconButton === actor)
-                return appIconButton;
-        }
-        return null;
+    _reloadFavorites() {
+        let favorites = AppFavorites.getAppFavorites().getFavorites();
+        for (let i = 0; i < favorites.length; i++)
+            this._ensureButton(favorites[i], i);
     }
 
-    _countPinnedAppsAheadOf(button) {
-        let count = 0;
-        let actors = this._container.get_children();
-        for (let i = 0; i < actors.length; i++) {
-            let otherButton = this._getIconButtonForActor(actors[i]);
-            if (otherButton === button)
-                return count;
-            if (otherButton && otherButton.isPinned())
-                count++;
+    _ensureButton(app, position) {
+        if (!this._isAppInteresting(app))
+            return;
+
+        if (this._taskbarApps.has(app)) {
+            let appButton = this._taskbarApps.get(app);
+            let appButtonAtIndex = this._container.get_child_at_index(position);
+            if (appButtonAtIndex == appButton)
+                return;
+            this._container.set_child_at_index(appButton, position);
+            return;
         }
-        return -1;
+
+        this._insertButton(app, position);
     }
 
-    _addButtonAnimated(app) {
+    _insertButton(app, position) {
         if (this._taskbarApps.has(app) || !this._isAppInteresting(app))
             return;
 
@@ -876,7 +893,7 @@ const ScrolledIconList = GObject.registerClass({
             this.emit('app-icon-pressed');
         });
         newChild.connect('app-icon-pinned', () => {
-            favorites.addFavoriteAtPos(app.get_id(), this._countPinnedAppsAheadOf(newChild));
+            favorites.addFavorite(app.get_id());
         });
         newChild.connect('app-icon-unpinned', () => {
             favorites.removeFavorite(app.get_id());
@@ -888,7 +905,7 @@ const ScrolledIconList = GObject.registerClass({
         });
         this._taskbarApps.set(app, newChild);
 
-        this._container.add_actor(newChild);
+        this._container.insert_child_at_index(newChild, position);
 
         if (app.state == Shell.AppState.STOPPED &&
             (this._parentalControlsManager &&
@@ -898,7 +915,7 @@ const ScrolledIconList = GObject.registerClass({
     }
 
     _addButton(app) {
-        this._addButtonAnimated(app);
+        this._insertButton(app, -1);
     }
 
     _onAppStateChanged(appSys, app) {
@@ -929,7 +946,7 @@ const ScrolledIconList = GObject.registerClass({
                 break;
             }
 
-            this._container.remove_actor(appButton);
+            this._container.remove_child(appButton);
             this._taskbarApps.delete(app);
 
             break;
