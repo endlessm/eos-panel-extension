@@ -147,14 +147,13 @@ function enable() {
 
         indicator = new constructor(this);
         this.statusArea[role] = indicator;
-        _extraIndicators.push(indicator);
-
         let destroyId = indicator.connect('destroy', emitter => {
             let index = _extraIndicators.indexOf(indicator);
             if (index > -1)
                 _extraIndicators.splice(index, 1);
             emitter.disconnect(destroyId);
         });
+        _extraIndicators.push([indicator, destroyId]);
 
         return indicator;
     });
@@ -172,8 +171,12 @@ function disable() {
     Utils.restore(Panel.Panel);
 
     for (var i = _extraIndicators.length - 1; i >= 0; i--) {
-        let indicator = _extraIndicators[i];
-        indicator.destroy();
+        let [ indicator, destroyId ] = _extraIndicators[i];
+        indicator.disconnect(destroyId);
+        // FIXME: Let's not destroy the indicators due to some lifecycle
+        //        issues on upstream indicators used by our custom ones.
+        //        See https://phabricator.endlessm.com/T30625.
+        // indicator.destroy();
     }
     _extraIndicators = [];
 
