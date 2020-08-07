@@ -168,6 +168,14 @@ function enable() {
 }
 
 function disable() {
+    // Hide all indicators before restoring the original method to make sure
+    // our custom indicators are hidden when the extension is disabled.
+    // We can't rely on '_extraIndicators' because it may be empty in case we
+    // are re-enabling the extension now that we don't destroy the indicators
+    // when disabling anymore - this can be removed if/once the issue
+    // destroying indicators is fixed (see below)
+    Main.panel._hideIndicators();
+
     Utils.restore(Panel.Panel);
 
     for (var i = _extraIndicators.length - 1; i >= 0; i--) {
