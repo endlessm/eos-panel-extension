@@ -33,18 +33,20 @@ class HotCorner extends SingleIconButton {
         super._init(_('Hot Corner'), Clutter.ActorAlign.END, Clutter.ActorAlign.END);
         this.add_style_class_name('hot-corner');
 
-        let iconFile;
+        let file;
         if (this.get_text_direction() === Clutter.TextDirection.RTL)
-            iconFile = Gio.File.new_for_uri(`file://${PanelExtension.path}/data/icons/hot-corner-rtl-symbolic.svg`);
+            file = Gio.File.new_for_uri(
+                `file://${PanelExtension.path}/data/icons/hot-corner-rtl-symbolic.svg`);
         else
-            iconFile = Gio.File.new_for_uri(`file://${PanelExtension.path}/data/icons/hot-corner-symbolic.svg`);
-        this.setIcon(new Gio.FileIcon({ file: iconFile }));
+            file = Gio.File.new_for_uri(
+                `file://${PanelExtension.path}/data/icons/hot-corner-symbolic.svg`);
+        this.setIcon(new Gio.FileIcon({ file }));
     }
 
     vfunc_event(event) {
         if (event.type() === Clutter.EventType.TOUCH_BEGIN ||
             event.type() === Clutter.EventType.BUTTON_PRESS) {
-            let button = event.get_button();
+            const button = event.get_button();
             if (button === Gdk.BUTTON_PRIMARY)
                 OverviewWrapper.toggleWindows(Main.overview);
         }
