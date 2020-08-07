@@ -74,9 +74,9 @@ function _getPanelForSessionMode(sessionMode) {
     let panel = sessionMode.panel;
     let panelStyle = sessionMode.panelStyle;
 
-    let currentMode = sessionMode.currentMode;
-    let parentMode = sessionMode.parentMode;
-    let panelMode = _panelModes[currentMode] ?
+    const currentMode = sessionMode.currentMode;
+    const parentMode = sessionMode.parentMode;
+    const panelMode = _panelModes[currentMode] ?
         _panelModes[currentMode] :
         (parentMode && _panelModes[parentMode] ?
             _panelModes[parentMode] : null);
@@ -91,7 +91,7 @@ function _getPanelForSessionMode(sessionMode) {
 
 function enable() {
     Utils.override(Panel.Panel, '_updatePanel', function() {
-        let [panel, panelStyle] = _getPanelForSessionMode(Main.sessionMode);
+        const [panel, panelStyle] = _getPanelForSessionMode(Main.sessionMode);
 
         this._hideIndicators();
         this._updateBox(panel.left, this._leftBox);
@@ -126,8 +126,8 @@ function enable() {
 
         original.bind(this)();
 
-        for (let role in EXTRA_PANEL_ITEM_IMPLEMENTATIONS) {
-            let indicator = this.statusArea[role];
+        for (const role in EXTRA_PANEL_ITEM_IMPLEMENTATIONS) {
+            const indicator = this.statusArea[role];
             if (!indicator)
                 continue;
             indicator.container.hide();
@@ -141,14 +141,14 @@ function enable() {
         if (indicator)
             return indicator;
 
-        let constructor = EXTRA_PANEL_ITEM_IMPLEMENTATIONS[role];
+        const constructor = EXTRA_PANEL_ITEM_IMPLEMENTATIONS[role];
         if (!constructor)
             return null;
 
         indicator = new constructor(this);
         this.statusArea[role] = indicator;
-        let destroyId = indicator.connect('destroy', emitter => {
-            let index = _extraIndicators.indexOf(indicator);
+        const destroyId = indicator.connect('destroy', emitter => {
+            const index = _extraIndicators.indexOf(indicator);
             if (index > -1)
                 _extraIndicators.splice(index, 1);
             emitter.disconnect(destroyId);
@@ -158,7 +158,7 @@ function enable() {
         return indicator;
     });
 
-    let panel = Main.panel;
+    const panel = Main.panel;
     // workaround to make sure the overriden Panel._updatePanel is
     // invoked when the session mode is updated. The original signal
     // connection uses 'bind' which circumvents the override mechanism here
@@ -179,7 +179,7 @@ function disable() {
     Utils.restore(Panel.Panel);
 
     for (var i = _extraIndicators.length - 1; i >= 0; i--) {
-        let [ indicator, destroyId ] = _extraIndicators[i];
+        const [indicator, destroyId] = _extraIndicators[i];
         indicator.disconnect(destroyId);
         // FIXME: Let's not destroy the indicators due to some lifecycle
         //        issues on upstream indicators used by our custom ones.
