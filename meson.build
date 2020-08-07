@@ -9,6 +9,7 @@ sources = [
 ]
 ui_sources = [
   'ui/layout.js',
+  'ui/overview.js',
   'ui/panel.js',
   'ui/panelManager.js',
   'ui/workspaceMonitor.js',
