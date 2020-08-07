@@ -24,6 +24,7 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const LayoutManagerWrapper = PanelExtension.imports.ui.layout;
 const PanelWrapper = PanelExtension.imports.ui.panel;
+const OverviewWrapper = PanelExtension.imports.ui.overview;
 const WorkspaceMonitor = PanelExtension.imports.ui.workspaceMonitor;
 
 var PanelManager = GObject.registerClass(
@@ -39,6 +40,7 @@ class PanelManager extends GObject.Object {
             return;
 
         WorkspaceMonitor.enable();
+        OverviewWrapper.enable();
         PanelWrapper.enable();
         LayoutManagerWrapper.enable();
 
@@ -50,6 +52,7 @@ class PanelManager extends GObject.Object {
             return;
 
         WorkspaceMonitor.disable();
+        OverviewWrapper.disable();
         PanelWrapper.disable();
         LayoutManagerWrapper.disable();
 
