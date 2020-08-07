@@ -1,5 +1,5 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
-/* exported override, restore, original */
+/* exported override, restore, original, loadInterfaceXML */
 /*
  * Copyright © 2020 Endless OS Foundation LLC
  *
@@ -16,6 +16,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
+
+const { Gio } = imports.gi;
+
+const ExtensionUtils = imports.misc.extensionUtils;
+const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 function override(object, methodName, callback) {
     if (!object._panelFnOverrides)
@@ -39,4 +44,18 @@ function restore(object) {
 
 function original(object, methodName) {
     return object._panelFnOverrides[methodName];
+}
+
+function loadInterfaceXML(iface) {
+    let uri = `file://${PanelExtension.path}/data/dbus-interfaces/${iface}.xml`;
+    let f = Gio.File.new_for_uri(uri);
+
+    try {
+        let [ok_, bytes] = f.load_contents(null);
+        return imports.byteArray.toString(bytes);
+    } catch (e) {
+        log(`Failed to load D-Bus interface ${iface}`);
+    }
+
+    return null;
 }
