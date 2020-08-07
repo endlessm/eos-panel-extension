@@ -15,6 +15,7 @@ ui_sources = [
   'ui/panel.js',
   'ui/panelManager.js',
   'ui/panelMenu.js',
+  'ui/power.js',
   'ui/powerButton.js',
   'ui/systemMenu.js',
   'ui/userMenu.js',
