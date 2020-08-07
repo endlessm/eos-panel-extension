@@ -28,6 +28,7 @@ icons = [
   'data/icons/feedback-symbolic.svg',
   'data/icons/hot-corner-symbolic.svg',
   'data/icons/hot-corner-rtl-symbolic.svg',
+  'data/icons/mini-icon-active-indicator.png',
 ]
 extra_data = [
   'COPYING',

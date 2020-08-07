@@ -1,0 +1,253 @@
+// Notifications
+
+.notification-banner {
+    margin: 12px;
+}
+
+// Panel
+
+#panel {
+    height: 40px;
+
+    .clock-display {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .power-button {
+        margin-left: 16px;
+    }
+
+    &.panel-button {
+        -minimum-hpadding: 6px;
+        -natural-hpadding: 6px;
+    }
+}
+
+.popup-menu {
+    .popup-menu-item.selected {
+        background-color: rgba(95, 95, 95, 1.0);
+    }
+
+    &.panel-menu {
+        -boxpointer-gap: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+    -arrow-background-color: #000000;
+}
+
+popup-separator-menu-item {
+  margin: 12px 0;
+  padding: 0;
+}
+
+// Apps Icon Bar
+
+#appIconBar {
+    padding-left: 2px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+
+    #appIconBarContainer {
+        spacing: 10px;
+        min-height: 40px;
+
+        .app-bar-nav-icon {
+            icon-size: 16px;
+            color: #555;
+            transition-duration: 100ms;
+        }
+
+        .app-bar-nav-button {
+            &:active .app-bar-nav-icon,
+            &:hover:active .app-bar-nav-icon { color: #383838; }
+            &:hover .app-bar-nav-icon { color: #aaa; }
+        }
+    }
+}
+
+.app-icon-bar {
+    &.panel-button {
+        -minimum-hpadding: 6px;
+        -natural-hpadding: 6px;
+    }
+}
+
+.app-icon-button {
+    background: none;
+    &:highlighted {
+        background-image: url("data/icons/mini-icon-active-indicator.png");
+        background-position: 2px 34px;
+    }
+}
+
+.app-icon-hover-label {
+    -label-offset-x: 4px;
+    -label-offset-y: 37px;
+    font-size: 11pt;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 4px;
+}
+
+.app-icon-menu,
+.panel-menu {
+    -boxpointer-gap: 4px;
+}
+
+.panel-window-menu-item {
+    .panel-window-menu-item-clone:indented { padding-left: 6px; }
+    .panel-window-menu-item-label { max-width: 256px; }
+}
+
+.panel-window-menu-workspace-label {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #999;
+}
+
+.scrolled-icon-list {
+    .scrolled-icon-spacer {
+        padding-right: 10px;
+
+        .scrolled-icon-container {
+            -icon-size: 24px;
+            height: 30px;
+            spacing: 10px;
+        }
+
+        &:rtl { padding-left: 10px; }
+    }
+
+    &.hfade { -st-hfade-offset: 10px; }
+}
+
+// System Indicators
+
+#panelRight {
+    .panel-button {
+        -natural-hpadding: 10px;
+        -minimum-hpadding: 10px;
+
+        .user-mode-indicators-box {
+            padding: 6px 4px;
+            color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+        }
+
+        &:hover {
+            .user-mode-indicators-box {
+                background-color: rgba(255, 255, 255, 0.12);
+                color: white;
+            }
+        }
+
+        &:clicked {
+            .user-mode-indicators-box {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        &:active {
+            .user-mode-indicators-box {
+                color: white;
+            }
+        }
+    }
+}
+
+// User Menu
+
+.user-menu-button-icon {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 17px;
+    background-size: 34px;
+    padding: 0px;
+
+    &:hover {
+        border-radius: 18px;
+        background-size: 36px;
+    }
+}
+
+.user-menu-avatar {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-color: rgba(50, 50, 50, 0.80);
+    border-radius: 30px;
+    border: 1px solid #000;
+
+    &:hover {
+        border: 1px solid #555;
+    }
+}
+
+.user-menu-name {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.user-menu-items {
+    margin: 6px 0px;
+}
+
+// Hot Corner
+
+#panel {
+    .hot-corner {
+        -minimum-hpadding: 0px;
+        -natural-hpadding: 0px;
+        color: #777;
+        height: 40px;
+
+        .single-icon-button {
+            icon-size: 18px;
+            padding: 0px;
+        }
+
+        &:hover { color: white; }
+    }
+}
+
+// Endless Button
+
+%endless-button-hover {
+    color: #f15a22;
+    background-gradient-start: rgba(255, 255, 255, 0.12);
+    transition: 300ms;
+}
+
+%endless-button-clicked {
+    @extend %endless-button-hover;
+    color: white;
+    box-shadow: none;
+}
+
+.endless-button {
+    color: rgba(255, 255, 255, 0.8);
+    background-gradient-start: rgba(255, 255, 255, 0.08);
+    background-gradient-end: transparent;
+    background-gradient-direction: radial;
+    background-gradient-position: 0 20px;
+    background-gradient-radius: 65px;
+    background-gradient-stop: 63px;
+    height: 40px;
+    width: 65px;
+    padding: 0px;
+
+    .single-icon-button { icon-size: 34px; }
+
+    &:hover { @extend %endless-button-hover; }
+    &:clicked { @extend %endless-button-clicked; }
+}
