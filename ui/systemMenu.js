@@ -37,7 +37,7 @@ class SystemMenu extends PanelMenu.Button {
         super._init(0.0, C_("System menu", "System"), false);
         this.menu.actor.add_style_class_name('aggregate-menu');
 
-        let menuLayout = new Panel.AggregateLayout();
+        const menuLayout = new Panel.AggregateLayout();
         this.menu.box.set_layout_manager(menuLayout);
 
         this._indicators = new St.BoxLayout({
@@ -109,7 +109,7 @@ class SystemMenu extends PanelMenu.Button {
         // Update volume state when session is updated
         this._volume._volumeMenu._onControlStateChanged();
 
-        let userMode = Main.sessionMode.hasOverview;
+        const userMode = Main.sessionMode.hasOverview;
         if (userMode)
             this._indicators.add_style_class_name('user-mode-indicators-box');
         else
