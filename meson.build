@@ -12,6 +12,7 @@ ui_sources = [
   'ui/overview.js',
   'ui/panel.js',
   'ui/panelManager.js',
+  'ui/panelMenu.js',
   'ui/workspaceMonitor.js',
 ]
 extra_data = [
