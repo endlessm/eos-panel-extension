@@ -981,7 +981,6 @@ class AppIconBarContainer extends St.Widget {
             name: 'appIconBarContainer',
             x_expand: true,
             y_expand: true,
-            y_align: Clutter.ActorAlign.CENTER,
         });
 
         this._spacing = 0;
