@@ -51,11 +51,11 @@ const UserAccountSection = class extends PopupMenu.PopupMenuSection {
         super();
 
         // User account's icon
-        this.userIconItem = new PopupMenu.PopupBaseMenuItem({
+        this._userIconItem = new PopupMenu.PopupBaseMenuItem({
             reactive: false,
             can_focus: false,
         });
-        this.userIconItem.set({
+        this._userIconItem.set({
             x_align: Clutter.ActorAlign.CENTER,
             x_expand: true,
         });
@@ -68,20 +68,20 @@ const UserAccountSection = class extends PopupMenu.PopupMenuSection {
         this._avatar.x_align = Clutter.ActorAlign.CENTER;
 
         const iconButton = new St.Button({ child: this._avatar });
-        this.userIconItem.add_child(iconButton);
+        this._userIconItem.add_child(iconButton);
 
         iconButton.connect('clicked', () => {
             if (Main.sessionMode.allowSettings)
-                this.userIconItem.activate(null);
+                this._userIconItem.activate(null);
         });
 
-        this.userIconItem.connect('notify::sensitive', () => {
-            this._avatar.setSensitive(this.userIconItem.getSensitive);
+        this._userIconItem.connect('notify::sensitive', () => {
+            this._avatar.setSensitive(this._userIconItem.getSensitive);
         });
-        this.addMenuItem(this.userIconItem);
+        this.addMenuItem(this._userIconItem);
 
         // User account's name
-        this.userLabelItem = new PopupMenu.PopupBaseMenuItem({
+        this._userLabelItem = new PopupMenu.PopupBaseMenuItem({
             reactive: false,
             can_focus: false,
         });
@@ -92,8 +92,8 @@ const UserAccountSection = class extends PopupMenu.PopupMenuSection {
             ellipsize: Pango.EllipsizeMode.NONE,
             line_wrap: true,
         });
-        this.userLabelItem.add_child(this._label);
-        this.addMenuItem(this.userLabelItem);
+        this._userLabelItem.add_child(this._label);
+        this.addMenuItem(this._userLabelItem);
 
         // We need to monitor the session to know when to enable the user avatar
         this._sessionModeUpdatedId = Main.sessionMode.connect('updated',
@@ -111,7 +111,7 @@ const UserAccountSection = class extends PopupMenu.PopupMenuSection {
     }
 
     _sessionUpdated() {
-        this.userIconItem.setSensitive(Main.sessionMode.allowSettings);
+        this._userIconItem.setSensitive(Main.sessionMode.allowSettings);
     }
 
     update() {
@@ -148,7 +148,7 @@ var UserMenuManager = class {
             this._userChangedId = 0;
         }
         if (this._activateId) {
-            this._accountSection.userIconItem.disconnect(this._activateId);
+            this._accountSection._userIconItem.disconnect(this._activateId);
             this._activateId = 0;
         }
         if (this._sessionModeUpdatedId) {
@@ -174,7 +174,7 @@ var UserMenuManager = class {
         this.menu = new PopupMenu.PopupMenuSection();
 
         this._accountSection = new UserAccountSection(this._user);
-        this._activateId = this._accountSection.userIconItem.connect('activate', () => {
+        this._activateId = this._accountSection._userIconItem.connect('activate', () => {
             this._launchApplication(USER_ACCOUNTS_PANEL_LAUNCHER);
         });
 
