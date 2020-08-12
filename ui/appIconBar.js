@@ -86,8 +86,10 @@ class WindowMenuItem extends PopupMenu.PopupBaseMenuItem {
         this.cloneBin = new St.Bin({
             child: clone,
             style_class: 'panel-window-menu-item-clone',
+            x_align: Clutter.ActorAlign.CENTER,
+            y_align: Clutter.ActorAlign.CENTER,
         });
-        this.add(this.cloneBin, { align: St.Align.MIDDLE });
+        this.add_child(this.cloneBin);
 
         this.label = new St.Label({
             text: window.title,
