@@ -65,6 +65,13 @@ const _panelModes = {
                     'powerButton'],
         },
     },
+    'initial-setup': {
+        panel: {
+            left: [],
+            center: [],
+            right: ["a11y", "keyboard", "systemMenu", 'powerButton'],
+        },
+    },
 };
 
 let _extraIndicators = [];
