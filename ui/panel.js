@@ -57,6 +57,13 @@ const _panelModes = {
             right: ['dwellClick', 'a11y', 'keyboard', 'systemMenu'],
         },
     },
+    'unlock-dialog-payg': {
+        panel: {
+            left: [],
+            center: [],
+            right: ['a11y', 'keyboard', 'systemMenu', 'powerButton'],
+        },
+    },
     'gdm': {
         panel: {
             left: [],
