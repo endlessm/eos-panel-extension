@@ -57,6 +57,12 @@ class SystemMenu extends PanelMenu.Button {
         else
             this._bluetooth = null;
 
+        try {
+            this._payg = new imports.ui.status.payg.Indicator();
+        } catch (e) {
+            this._payg = null;
+            log('Unable to load PAYG indicator, ignoring');
+        }
         this._remoteAccess = new imports.ui.status.remoteAccess.RemoteAccessApplet();
         this._power = new Power.Indicator();
         this._rfkill = new imports.ui.status.rfkill.Indicator();
@@ -73,6 +79,8 @@ class SystemMenu extends PanelMenu.Button {
             this._indicators.add_child(this._network);
         if (this._bluetooth)
             this._indicators.add_child(this._bluetooth);
+        if (this._payg)
+            this._indicators.add_child(this._payg);
         this._indicators.add_child(this._remoteAccess);
         this._indicators.add_child(this._rfkill);
         this._indicators.add_child(this._volume);
@@ -88,6 +96,9 @@ class SystemMenu extends PanelMenu.Button {
 
         if (this._bluetooth)
             this.menu.addMenuItem(this._bluetooth.menu);
+
+        if (this._payg)
+            this.menu.addMenuItem(this._payg.menu);
 
         this.menu.addMenuItem(this._remoteAccess.menu);
         this.menu.addMenuItem(this._rfkill.menu);
