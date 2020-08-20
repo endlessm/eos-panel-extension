@@ -491,6 +491,7 @@ const AppIconButton = GObject.registerClass({
         if (this._label.get_parent())
             return;
 
+        this._closeOtherMenus(BoxPointer.PopupAnimation.FULL);
         Main.uiGroup.add_actor(this._label);
         Main.uiGroup.set_child_above_sibling(this._label, null);
 
