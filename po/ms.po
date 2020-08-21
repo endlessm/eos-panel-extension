@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# abuyop <abuyop@gmail.com>, 2019-2020
+# Andi Rady Kurniawan <niariot87@gmail.com>, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-04-25 07:40+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"Language-Team: Malay (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/ms/)\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "Lain-lain ruang kerja"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "Ruang kerja semasa"
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "Cemat ke Palang Tugas"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "Tanggalkan daripada Palang Tugas"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "Tutup %s"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "Baris Gilir Kemaskini"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "Tetapkan satu Jadual"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "Kemaskini Automatik"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "Kemaskini automatik hidup"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr ""
+"Anda mempunyai Data Tanpa Had maka kemaskini automatik telah dihidupkan bagi "
+"sambungan ini."
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr ""
+"Kemaskini-kemaskini automatik telah dimatikan untuk menjimatkan data anda"
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+"Anda perlu memilih kemaskini-kemaskini Endless yang manakah untuk diterapkan "
+"kepada sambungan ini."
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "Tutup"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "Ubah Tetapan..."
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "Hidup"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "Mati"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "Butang Endless"
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "Tunjuk Atas Meja"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "Tunjuk Apl"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "Bucu Panas"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "Benarkan Bucu Panas"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "Lumpuhkan Bucu Panas"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "Tiada apl dibuka"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "Kuasa"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "Sistem"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "Tetapan"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "Akaun-Akaun Sosial"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "Beri Maklumbalas"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "Bantuan"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "Menu Pengguna"

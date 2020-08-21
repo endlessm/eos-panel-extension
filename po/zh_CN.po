@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# Aron Xu <aronxu@gnome.org>, 2010-2013,2015-2016
+# chenzibing <chenzibing_endless@126.com>, 2016
+# chiachen L <luojiazhen@gmail.com>, 2011
+# chiachen L <luojiazhen@gmail.com>, 2011
+# 759b81c7bb2252a11f36c89344f31007, 2017-2018
+# David Young <dhyang555@gmail.com>, 2010
+# Dingzhong Chen <wsxy162@gmail.com>, 2018-2019
+# e2f_cn c5 <jarvisn@ecinnovations.com>, 2017
+# e2f_cn c5 <jarvisn@ecinnovations.com>, 2017
+# 5c1f498cdfcd3e8829513039a952cd0d, 2018
+# fanjunjun <tfanjunjun@126.com>, 2016
+# hui <www.eternalhui@gmail.com>, 2013-2014
+# Jessica Ban <bancage@gmail.com>, 2010
+# jiero <lililjlj@gmail.com>, 2010
+# liushuyu <liushuyu_011@126.com>, 2015-2016
+# liuxuejiao <liuxuejiao_endless@126.com>, 2016
+# Marco Mai <marco@endlessm.com>, 2015
+# Mingcong Bai <jeffbai@aosc.xyz>, 2015-2017
+# 1dot75cm <sensor.wen@gmail.com>, 2014
+# Ray Wang <raywang@gnome.org>, 2009,2011
+# Roddy Shuler <roddy@stanfordalumni.org>, 2016-2018
+# 241bd3e038359c90ddbcb0b5f36a4a1e, 2011
+# StarBrilliant <m13253@hotmail.com>, 2011
+# tanyuanxing <tanyuanxingendless@126.com>, 2016
+# Tong Hui <tonghuix@gmail.com>, 2013-2015
+# Wylmer Wang, 2013-2014
+# YunQiang Su <wzssyqa@gmail.com>, 2010-2012
+# zhang ping <zhangping159@gmail.com>, 2010
+# zhifeng peng <jnufeng@126.com>, 2016
+# 宇辰 季 <jiyuchen001@126.com>, 2020
+# David Young <dhyang555@gmail.com>, 2010
+# 李炜 <lw124124@gmail.com>, 2011
+# 杜茂森 <dumaosen_main01@outlook.com>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-04-21 11:29+0000\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/zh_CN/)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "其它工作区"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "当前工作区"
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "锁定到任务栏"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "取消固定到任务栏"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "退出%s"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "更新队列"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "设置日程"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "自动更新"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "自动更新已开启"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr "您拥有无限数据，因此此连接的自动更新已打开。"
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr "关闭自动更新以保存您的数据"
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr "您需要选择在连接时应用哪些 Endless 更新。"
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "关闭"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "更改设置......"
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "开启"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "关闭"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "Endless 按钮"
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "显示桌面"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "显示应用"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "热区"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "启用热区"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "禁用热区"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "没有打开任何应用"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "电源"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "系统"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "设置"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "社交媒体帐户"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "反馈给我们"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "帮助"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "用户菜单"

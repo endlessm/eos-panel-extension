@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# Chandan kumar <chandankumar.093047@gmail.com>, 2012
+# e2f_in_c3 <e2f_in_c3@outlook.com>, 2016
+# 25c299dc371da5bff014f86901f492aa, 2016-2018
+# rajesh <rajeshkajha@yahoo.com>, 2012-2014
+# Rajesh <rranjan>, 2011
+# Roddy Shuler <roddy@stanfordalumni.org>, 2016-2018
+# Will Thompson <wjt@endlessm.com>, 2019-2020
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-04-18 10:47+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Hindi (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/hi/)\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "अन्य कार्यस्थल"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "मौजूदा कार्यस्थल"
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "टास्कबार में पिन करें"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "टास्कबार से अनपिन करें"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "%s से बाहर निकलें"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "अपडेट्स की कतार"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "एक अनुसूची सेट करें"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "अपने आप अपडेट"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "पर स्वचालित अपडेट"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr "आपके पास असीमित डेटा है इसलिए इस कनेक्शन के लिए स्वचालित अपडेट चालू किए गए हैं"
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr "आपके डेटा को सेव करने के लिए स्वचालित अपडेट बंद कर दिए जाते हैं"
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr "जब आप इस कनेक्शन पर हैं तो आपको चुनना होगा कि कौन सा एंडलेस अपडेट लागू होगा."
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "बंद करें"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "सेटिंग्स बदलें..."
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "चालू करें"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "बन्द करें"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "एंड्लेस बटन"
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "डेस्कटॉप दिखाएँ"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "एप्लिकेशन दिखाएँ"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "हॉट कॉर्नर"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "हॉट कॉर्नर को सक्रिय करें"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "हॉट कॉर्नर को निष्क्रिय करें"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "कोई एप्लिकेशन खुली नहीं हैं"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "पावर"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "तंत्र"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "सेटिंग"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "सामाजिक खाते"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "हमें सुझाव दें"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "मदद"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "उपयोक्ता मेन्यू"

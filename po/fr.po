@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# AlainLojewski <allomervan@gmail.com>, 2014,2017
+# Alexandre Franke <alexandre.franke@gmail.com>, 2012,2015
+# Charles Monzat <c.monzat@laposte.net>, 2016
+# Claude Paroz <claude@2xlibre.net>, 2016
+# Cyril Arnaud <cyril dot arnaud at gmail dot com>, 2011
+# Erwan Georget <egeorget@opmbx.org>, 2016
+# Julien Humbert <julroy67@gmail.com>, 2019
+# Luc Guillemin <luc.guillemin@gmail.com>, 2011
+# Luc Pionchon <pionchon.luc@gmail.com>, 2011
+# Mathieu Bridon <bochecha@daitauha.fr>, 2009
+# Mathieu Bridon <bochecha@fedoraproject.org>, 2009
+# Mathieu Stumpf <psychoslave@culture-libre.org>, 2013
+# Pablo Martin-Gomez <pablo.martin-gomez@laposte.net>, 2010
+# Pierre Henry <pierrehenry73@yahoo.fr>, 2012
+# Roddy Shuler <roddy@stanfordalumni.org>, 2014-2018
+# Will Thompson <wjt@endlessm.com>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-04-18 02:40+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: French (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "Les autres espaces de travail"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "L'espace de travail en cours"
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "Épingler à la barre des tâches"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "Détacher de la barre des tâches"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "Arrêter « %s »"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "Actualisation de la file d'attente"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "Définir un calendrier"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "Mises à jour automatiques"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "Mises à jour automatiques le"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr ""
+"Vous disposez des données illimitées. Les mises à jour automatiques ont donc "
+"été activées pour cette connexion."
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr ""
+"Les mises à jour automatiques sont désactivées pour la sauvegarde de vos "
+"données."
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+"Vous devez paramétrer les mises à jour Endless à faire sur cette connexion."
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "Fermer"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "Modification des paramètres…"
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "Activer"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "Éteindre"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "Bouton Endless"
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "Afficher le bureau"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "Afficher les applications"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "Coin chaud"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "Activer Coin actif"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "Désactiver Coin actif"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "Aucune application n'est ouverte"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "Énergie"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "Système"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "Paramètres"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "Comptes réseaux sociaux"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "Donnez-nous un feedback"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "Aide"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "Menu de l'utilisateur"

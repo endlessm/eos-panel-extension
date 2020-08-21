@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# abc Def <hdogan1974@gmail.com>, 2020
+# Baris Cicek <baris@teamforce.name.tr>, 2009
+# Bayram Güçlü <byrmgcl@yandex.com.tr>, 2014
+# Burcu Özacar <13urcu@gmail.com>, 2017
+# Emin Tufan <etcetin@gmail.com>, 2017
+# ercin <ercin@linux.org.tr>, 2011
+# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017-2018
+# Gökhan Gurbetoğlu <ggurbet@gmail.com>, 2014
+# Koray KIRCAOĞLU <koraym@gmail.com>, 2017
+# Muha Aliss <muhaaliss@gmail.com>, 2019
+# Muhammet Kara <muhammet.k@gmail.com>, 2011-2012
+# Muhammet Kara <muhammetk@gmail.com>, 2011-2017
+# Osman Karagöz <osmank3@gmail.com>, 2013
+# Sabri Ünal <libreajans@gmail.com>, 2014,2019
+# Sabri Ünal <yakushabb@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-05-05 13:41+0000\n"
+"Last-Translator: abc Def <hdogan1974@gmail.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/tr/)\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "Diğer çalışma alanları"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "Aktif çalışma alanı"
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "Görev çubuğuna sabitle"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "Görev çubuğundan kaldır"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "Kapat: %s"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "Güncellemeler Kuyruğu"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "Bir Program Ayarla"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "Otomatik Güncellemeler"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "Otomatik güncellemeler aktif"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr ""
+"Sınırsız veri bağlantısına sahipsiniz, bu yüzden bu bağlantı için otomatik "
+"güncellemeler açıldı."
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr ""
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+"Bu bağlantıdayken hangi Endless güncellemelerinin uygulanacağını seçmeniz "
+"gerekir."
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "Kapat"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "Ayarları değiştir…"
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "Aç"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "Kapat"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "Endless Düğme"
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "Masaüstünü Göster"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "Uygulamaları Göster"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "Etikn Köşeler"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "Sihirli Köşeleri Etkinleştir"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "Sihirli Köşeleri Kapat"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "Hiçbir uygulama açık değil"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "Güç"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "Sistem"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "Sosyal Medya Hesapları"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "Geri Bildirimde Bulunun"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "Yardım"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "Kullanıcı menüsü"
