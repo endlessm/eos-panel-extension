@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+# abderrahim <a.kitouni@gmail.com>, 2012,2014
+# Ibrahim Saed <ibraheem5000@gmail.com>, 2012
+# Khaled Hosny, 2009-2019
+# Muhammed Abdulaziz <thenubianmuha_idrecy@yahoo.co.uk>, 2012
+# Oussama Nehar <nehardido@gmail.com>, 2018
+# Roddy Shuler <roddy@stanfordalumni.org>, 2014-2015,2017-2018
+# Yasmin Diab <yasmin.diab.lopez@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-22 05:15-0300\n"
+"PO-Revision-Date: 2020-04-18 06:44+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
+"Language-Team: Arabic (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/ar/)\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr "مساحات عمل أخرى"
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr "مساحة العمل الحالية "
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr "قُم بالتثبيت إلى شريط المهام"
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr "إلغاء التثبيت من شريط المهام"
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr "إغلاق %s"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr "طابور التحديثات"
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr "تعيين جدول"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr "التحديث التلقائي"
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr "التحديث التلقائي يعمل"
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr "لديك بيانات غير محدودة لذا تم تشغيل التحديثات التلقائية لهذا الاتصال."
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr "تم إيقاف التحديثات التلقائية عن العمل، لتوفير استهلاك البيانات"
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+"ستحتاج إلى تحديد تحديثات نظام Endless التي يمكن تنزيلها أثناء استخدام هذا "
+"الاتصال."
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "أغلِق"
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr "تغيير الإعدادات..."
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "شغّل"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "أوقف"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr "زر Endless "
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr "عرض سطح المكتب"
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr "عرض التطبيقات"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr "الركن الساخن"
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr "تمكين الزاوية الساخنة"
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr "تعطيل الزاوية الساخنة"
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr "لا توجد تطبيقات مفتوحة"
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr "الطاقة"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "النظام"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr "حسابات اجتماعية"
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr "تعطينا تعليق"
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "المساعدة"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "قائمة المستخدم"
