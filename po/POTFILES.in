@@ -1,0 +1,17 @@
+# List of source files to look for translatable strings.
+# Please keep this file sorted alphabetically.
+ui/appIconBar.js
+ui/automaticUpdates.js
+ui/endlessButton.js
+ui/hotCorner.js
+ui/layout.js
+ui/overview.js
+ui/panel.js
+ui/panelManager.js
+ui/panelMenu.js
+ui/powerButton.js
+ui/power.js
+ui/systemMenu.js
+ui/userMenu.js
+ui/workspaceMonitor.js
+utils.js

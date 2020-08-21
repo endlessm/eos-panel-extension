@@ -30,6 +30,7 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const AutomaticUpdates = PanelExtension.imports.ui.automaticUpdates;
 const Power = PanelExtension.imports.ui.power;
+const _ = PanelExtension.imports.utils.gettext;
 
 var SystemMenu = GObject.registerClass(
 class SystemMenu extends PanelMenu.Button {

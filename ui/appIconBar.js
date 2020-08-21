@@ -26,6 +26,10 @@ const Main = imports.ui.main;
 const PanelMenu = imports.ui.panelMenu;
 const PopupMenu = imports.ui.popupMenu;
 
+const ExtensionUtils = imports.misc.extensionUtils;
+const PanelExtension = ExtensionUtils.getCurrentExtension();
+const _ = PanelExtension.imports.utils.gettext;
+
 var ParentalControlsManager = null;
 if (Config.PACKAGE_VERSION > '3.37.1')
     ParentalControlsManager = imports.misc.parentalControlsManager;

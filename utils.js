@@ -23,6 +23,10 @@ const { Gio } = imports.gi;
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 
+const Gettext = imports.gettext.domain('eos-panel-extension');
+
+var gettext = Gettext.gettext;
+
 function getMigrationSettings() {
     const dir = PanelExtension.dir.get_child('schemas').get_path();
     const source = Gio.SettingsSchemaSource.new_from_directory(dir,

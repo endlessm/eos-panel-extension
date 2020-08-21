@@ -28,6 +28,7 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 const OverviewWrapper = PanelExtension.imports.ui.overview;
 const Settings = ExtensionUtils.getSettings();
 const SingleIconButton = PanelExtension.imports.ui.panelMenu.SingleIconButton;
+const _ = PanelExtension.imports.utils.gettext;
 
 // GSettings keys to determine the position of the hot corner target.
 var HOT_CORNER_ON_RIGHT_KEY = 'hot-corner-on-right';

@@ -116,3 +116,6 @@ styles = custom_target('styles',
   install_dir: extensiondir,
   build_by_default: true
 )
+
+i18n = import('i18n')
+subdir('po')

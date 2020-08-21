@@ -26,6 +26,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const SingleIconButton = PanelExtension.imports.ui.panelMenu.SingleIconButton;
+const _ = PanelExtension.imports.utils.gettext;
 
 var PowerButton = GObject.registerClass(
 class PowerButton extends SingleIconButton {
