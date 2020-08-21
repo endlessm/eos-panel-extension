@@ -31,6 +31,7 @@ const PopupMenu = imports.ui.popupMenu;
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 const Utils = PanelExtension.imports.utils;
+const _ = PanelExtension.imports.utils.gettext;
 
 const NM_SETTING_AUTOMATIC_UPDATES_NOTIFICATION_TIME = 'connection.automatic-updates-notification-time';
 const NM_SETTING_ALLOW_DOWNLOADS = 'connection.allow-downloads';

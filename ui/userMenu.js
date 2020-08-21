@@ -28,6 +28,7 @@ const UserWidget = imports.ui.userWidget;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
+const _ = PanelExtension.imports.utils.gettext;
 
 const USER_ICON_SIZE = 34;
 

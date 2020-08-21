@@ -28,6 +28,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 const Utils = PanelExtension.imports.utils;
 const WorkspaceMonitor = PanelExtension.imports.ui.workspaceMonitor;
+const _ = PanelExtension.imports.utils.gettext;
 
 const NO_WINDOWS_OPEN_DIALOG_TIMEOUT = 2000; // ms
 

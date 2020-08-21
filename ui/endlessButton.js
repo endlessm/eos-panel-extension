@@ -27,6 +27,7 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const OverviewWrapper = PanelExtension.imports.ui.overview;
 const SingleIconButton = PanelExtension.imports.ui.panelMenu.SingleIconButton;
+const _ = PanelExtension.imports.utils.gettext;
 
 var EndlessButton = GObject.registerClass(
 class EndlessButton extends SingleIconButton {
