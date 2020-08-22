@@ -51,6 +51,39 @@ class HotCornerButton extends SingleIconButton {
             file = Gio.File.new_for_uri(
                 `file://${PanelExtension.path}/data/icons/hot-corner-symbolic.svg`);
         this.setIcon(new Gio.FileIcon({ file }));
+
+        this._interfaceSettings = new Gio.Settings({
+            schema_id: 'org.gnome.desktop.interface',
+        });
+
+        this._enableMenuItem = this.menu.addAction(_('Enable Hot Corner'), () => {
+            this._interfaceSettings.set_boolean('enable-hot-corners', true);
+        });
+
+        this._disableMenuItem = this.menu.addAction(_('Disable Hot Corner'), () => {
+            this._interfaceSettings.set_boolean('enable-hot-corners', false);
+        });
+
+        this._enabledChangedId = this._interfaceSettings.connect(
+            'changed::' + 'enable-hot-corners', this._sync.bind(this));
+        this.menu.connect('menu-closed', this._sync.bind(this));
+
+        this._sync();
+    }
+
+    _onDestroy() {
+        super._onDestroy();
+
+        if (this._enabledChangedId) {
+            this._interfaceSettings.disconnect(this._enabledChangedId);
+            this._enabledChangedId = 0;
+        }
+    }
+
+    _sync() {
+        const isEnabled = this._interfaceSettings.get_boolean('enable-hot-corners');
+        this._enableMenuItem.actor.visible = !isEnabled;
+        this._disableMenuItem.actor.visible = isEnabled;
     }
 
     vfunc_event(event) {
@@ -59,6 +92,8 @@ class HotCornerButton extends SingleIconButton {
             const button = event.get_button();
             if (button === Gdk.BUTTON_PRIMARY)
                 OverviewWrapper.toggleWindows(Main.overview);
+            else if (button === Gdk.BUTTON_SECONDARY)
+                this.menu.toggle();
         }
 
         return Clutter.EVENT_PROPAGATE;
