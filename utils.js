@@ -1,5 +1,6 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
-/* exported override, restore, original, loadInterfaceXML */
+/* exported getMigrationSettings, tryMigrateSettings,
+ *   override, restore, original, loadInterfaceXML */
 /*
  * Copyright © 2020 Endless OS Foundation LLC
  *
@@ -21,6 +22,54 @@ const { Gio } = imports.gi;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
+
+function getMigrationSettings() {
+    const dir = PanelExtension.dir.get_child('schemas').get_path();
+    const source = Gio.SettingsSchemaSource.new_from_directory(dir,
+        Gio.SettingsSchemaSource.get_default(), false);
+
+    if (!source)
+        throw new Error('Error retrieving settings schema source');
+
+    const schema = source.lookup('org.gnome.shell', false);
+    if (!schema)
+        throw new Error('Schema missing');
+
+    return new Gio.Settings({ settings_schema: schema });
+}
+
+function tryMigrateSettings() {
+    const settings = ExtensionUtils.getSettings();
+    if (settings.get_boolean('panel-settings-migrated'))
+        return;
+
+    const desktopInterfaceSettings = new Gio.Settings({
+        schema_id: 'org.gnome.desktop.interface',
+    });
+
+    const oldSettings = getMigrationSettings();
+    const boolSettings = [
+        [ 'hot-corner-enabled', desktopInterfaceSettings, 'enable-hot-corners' ],
+        [ 'hot-corner-on-right', null, null ],
+        [ 'hot-corner-on-bottom', null, null ],
+    ];
+    const intSettings = [
+        [ 'hot-corner-size', null, null ],
+    ];
+
+    boolSettings.forEach((k) => {
+        const destSettings = k[1] ? k[1] : settings;
+        const destKey = k[2] ? k[2] : k[0];
+        destSettings.set_boolean(destKey, oldSettings.get_boolean(k[0]));
+    });
+    intSettings.forEach((k) => {
+        const destSettings = k[1] ? k[1] : settings;
+        const destKey = k[2] ? k[2] : k[0];
+        destSettings.set_int(destKey, oldSettings.get_int(k[0]));
+    });
+
+    settings.set_boolean('panel-settings-migrated', true);
+}
 
 function override(object, methodName, callback) {
     if (!object._panelFnOverrides)

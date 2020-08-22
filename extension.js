@@ -20,6 +20,7 @@
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 const PanelManager = PanelExtension.imports.ui.panelManager;
+const { tryMigrateSettings } = PanelExtension.imports.utils;
 
 class Extension {
     constructor() {
@@ -27,6 +28,8 @@ class Extension {
     }
 
     enable() {
+        tryMigrateSettings();
+
         this._panelManager.enable();
     }
 
