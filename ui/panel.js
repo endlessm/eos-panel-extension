@@ -35,7 +35,7 @@ const Utils = PanelExtension.imports.utils;
 const EXTRA_PANEL_ITEM_IMPLEMENTATIONS = {
     'appIconBar': AppIconBar.AppIconBar,
     'endlessButton': EndlessButton.EndlessButton,
-    'hotCorner': HotCorner.HotCorner,
+    'hotCornerButton': HotCorner.HotCornerButton,
     'powerButton': PowerButton.PowerButton,
     'systemMenu': SystemMenu.SystemMenu,
     'userMenu': UserMenu.UserMenu,
@@ -47,7 +47,7 @@ const _panelModes = {
             left: ['endlessButton', 'appIconBar'],
             center: [],
             right: ['dwellClick', 'a11y', 'keyboard', 'systemMenu',
-                    'dateMenu', 'userMenu', 'hotCorner'],
+                    'dateMenu', 'userMenu', 'hotCornerButton'],
         },
     },
     'unlock-dialog': {
