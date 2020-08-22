@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schemalist>
-  <schema path="/com/endlessm/panel-extension/" id="com.endlessm.panel-extension" >
-    <key type="b" name="panel-settings-migrated">
+  <schema id="org.gnome.shell" path="/org/gnome/shell/">
+    <key name="hot-corner-enabled" type="b">
       <default>false</default>
       <summary>
-        The old panel settings has been migrated
+        Enables the hot corner for the window picker
       </summary>
       <description>
-        If true, the settings from org.gnome.shell has been copied to the new schema.
+        By default, the hot corner for the window picker is disabled.
+        Set to true to enable the hot corner.
       </description>
     </key>
-
     <key name="hot-corner-on-right" type="b">
       <default>true</default>
       <summary>

@@ -47,6 +47,7 @@ extra_data = [
 ]
 schemas = [
   'com.endlessm.panel-extension',
+  'org.gnome.shell',
 ]
 
 uuid = 'eos-panel@endlessm.com'
