@@ -120,7 +120,7 @@ function _showWindows(overview) {
     _showOrSwitchPage(overview, ViewSelector.ViewPage.WINDOWS);
 }
 
-function toggleApps(overview) {
+function toggleApps(overview, ignoreNoWindowsDialog = false) {
     if (overview.isDummy)
         return;
 
@@ -130,7 +130,7 @@ function toggleApps(overview) {
         return;
     }
 
-    if (!WorkspaceMonitor.hasActiveWindows()) {
+    if (!ignoreNoWindowsDialog && !WorkspaceMonitor.hasActiveWindows()) {
         _noWindowsDialog.popup();
         return;
     }
@@ -148,7 +148,7 @@ function toggleApps(overview) {
     overview.hide();
 }
 
-function toggleWindows(overview) {
+function toggleWindows(overview, ignoreNoWindowsDialog = false) {
     if (overview.isDummy)
         return;
 
@@ -157,7 +157,7 @@ function toggleWindows(overview) {
         return;
     }
 
-    if (!WorkspaceMonitor.hasActiveWindows()) {
+    if (!ignoreNoWindowsDialog && !WorkspaceMonitor.hasActiveWindows()) {
         _noWindowsDialog.popup();
         return;
     }
