@@ -25,6 +25,10 @@ ui_sources = [
   'ui/workspaceMonitor.js',
 ]
 icons = [
+  'data/icons/corner-ripple-bl.png',
+  'data/icons/corner-ripple-br.png',
+  'data/icons/corner-ripple-tl.png',
+  'data/icons/corner-ripple-tr.png',
   'data/icons/endless-auto-updates-off-symbolic.svg',
   'data/icons/endless-auto-updates-on-symbolic.svg',
   'data/icons/endless-auto-updates-scheduled-symbolic.svg',
