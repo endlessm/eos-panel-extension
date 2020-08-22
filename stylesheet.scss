@@ -220,6 +220,25 @@ popup-separator-menu-item {
     }
 }
 
+$ripple_size: 50px;
+
+.ripple-box {
+    background-image: url("data/icons/corner-ripple-tl.png");
+    border-radius: 0 0 $ripple_size + 2px 0;
+    &:tr {
+        background-image: url("data/icons/corner-ripple-tr.png");
+        border-radius: 0 0 0 $ripple_size + 2px;
+    }
+    &:bl {
+        background-image: url("data/icons/corner-ripple-bl.png");
+        border-radius: 0 $ripple_size + 2px 0 0;
+    }
+    &:br {
+        background-image: url("data/icons/corner-ripple-br.png");
+        border-radius: $ripple_size + 2px 0 0 0;
+    }
+}
+
 // Endless Button
 
 %endless-button-hover {
