@@ -27,8 +27,8 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 const OverviewWrapper = PanelExtension.imports.ui.overview;
 const SingleIconButton = PanelExtension.imports.ui.panelMenu.SingleIconButton;
 
-var HotCorner = GObject.registerClass(
-class HotCorner extends SingleIconButton {
+var HotCornerButton = GObject.registerClass(
+class HotCornerButton extends SingleIconButton {
     _init() {
         super._init(_('Hot Corner'), Clutter.ActorAlign.END, Clutter.ActorAlign.END);
         this.add_style_class_name('hot-corner');
