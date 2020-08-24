@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-24 16:40-0300\n"
+"PO-Revision-Date: 2020-04-24 13:21+0000\n"
+"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
+"Language-Team: Xhosa (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/xh/)\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr ""
+
+#: ui/appIconBar.js:225
+msgid "Current workspace"
+msgstr ""
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr ""
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr ""
+
+#: ui/appIconBar.js:327
+#, javascript-format
+msgid "Quit %s"
+msgstr ""
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr ""
+
+#: ui/automaticUpdates.js:110
+msgid "Set a Schedule"
+msgstr ""
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr ""
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr ""
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr ""
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr ""
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr ""
+
+#: ui/automaticUpdates.js:336
+msgid "Change Settings…"
+msgstr ""
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr ""
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr ""
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr ""
+
+#: ui/endlessButton.js:88
+msgid "Show Desktop"
+msgstr ""
+
+#: ui/endlessButton.js:90
+msgid "Show Apps"
+msgstr ""
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr ""
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr ""
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr ""
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr ""
+
+#: ui/powerButton.js:34
+msgctxt "Power menu"
+msgid "Power"
+msgstr ""
+
+#: ui/systemMenu.js:38
+msgctxt "System menu"
+msgid "System"
+msgstr ""
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr ""
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr ""
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr ""
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr "Uncedo"
+
+#: ui/userMenu.js:261
+msgctxt "User menu"
+msgid "User Menu"
+msgstr ""
