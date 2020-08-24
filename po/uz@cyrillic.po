@@ -1,0 +1,158 @@
+# Uzbek (Cyrillic) translation for eos-panel-extension.
+# Copyright (C) 2014 eos-panel-extension's COPYRIGHT HOLDER
+# This file is distributed under the same license as the eos-panel-extension package.
+# Bahodir Mansurov <6ahodir@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: eos-panel-extension master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-24 16:40-0300\n"
+"PO-Revision-Date: 2016-09-25 09:14-0400\n"
+"Last-Translator: Bahodir Mansurov <6ahodir@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/endless-os/eos-panel-extension/"
+"language/uz@cyrillic/)\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-DamnedLies-Scope: partial\n"
+"X-Generator: Poedit 1.8.9\n"
+
+#: ui/appIconBar.js:216
+msgid "Other workspaces"
+msgstr ""
+
+#: ui/appIconBar.js:225
+#, fuzzy
+msgid "Current workspace"
+msgstr "Переключателни фақат шу иш жойи билан чегаралаш."
+
+#: ui/appIconBar.js:302
+msgid "Pin to Taskbar"
+msgstr ""
+
+#: ui/appIconBar.js:306
+msgid "Unpin from Taskbar"
+msgstr ""
+
+#: ui/appIconBar.js:327
+#, fuzzy, javascript-format
+msgid "Quit %s"
+msgstr "Чиқиш"
+
+#: ui/automaticUpdates.js:85
+msgid "Updates Queue"
+msgstr ""
+
+#: ui/automaticUpdates.js:110
+#, fuzzy
+msgid "Set a Schedule"
+msgstr "Ҳеч нарса режалаштирилмаган"
+
+#. The status label
+#: ui/automaticUpdates.js:243
+msgid "Automatic Updates"
+msgstr ""
+
+#: ui/automaticUpdates.js:307
+msgid "Automatic updates on"
+msgstr ""
+
+#: ui/automaticUpdates.js:308
+msgid ""
+"You have Unlimited Data so automatic updates have been turned on for this "
+"connection."
+msgstr ""
+
+#: ui/automaticUpdates.js:311
+msgid "Automatic updates are turned off to save your data"
+msgstr ""
+
+#: ui/automaticUpdates.js:312
+msgid ""
+"You will need to choose which Endless updates to apply when on this "
+"connection."
+msgstr ""
+
+#: ui/automaticUpdates.js:332
+msgid "Close"
+msgstr "Ёпиш"
+
+#: ui/automaticUpdates.js:336
+#, fuzzy
+msgid "Change Settings…"
+msgstr "Товуш мосламалари"
+
+#: ui/automaticUpdates.js:362
+msgid "Turn On"
+msgstr "Ёқиш"
+
+#: ui/automaticUpdates.js:364
+msgid "Turn Off"
+msgstr "Ўчириш"
+
+#: ui/endlessButton.js:35
+msgid "Endless Button"
+msgstr ""
+
+#: ui/endlessButton.js:88
+#, fuzzy
+msgid "Show Desktop"
+msgstr "Тафсилотларни кўрсатиш"
+
+#: ui/endlessButton.js:90
+#, fuzzy
+msgid "Show Apps"
+msgstr "Дастурларни кўрсатиш"
+
+#: ui/hotCorner.js:51
+msgid "Hot Corner"
+msgstr ""
+
+#: ui/hotCorner.js:63
+msgid "Enable Hot Corner"
+msgstr ""
+
+#: ui/hotCorner.js:67
+msgid "Disable Hot Corner"
+msgstr ""
+
+#: ui/overview.js:48
+msgid "No apps are open"
+msgstr ""
+
+#: ui/powerButton.js:34
+#, fuzzy
+msgctxt "Power menu"
+msgid "Power"
+msgstr "Ўчган"
+
+#: ui/systemMenu.js:38
+#, fuzzy
+msgctxt "System menu"
+msgid "System"
+msgstr "Система"
+
+#: ui/userMenu.js:35
+msgid "Settings"
+msgstr "Мосламалар"
+
+#: ui/userMenu.js:40
+msgid "Social Accounts"
+msgstr ""
+
+#: ui/userMenu.js:43
+msgid "Give Us Feedback"
+msgstr ""
+
+#: ui/userMenu.js:46
+msgid "Help"
+msgstr ""
+
+#: ui/userMenu.js:261
+#, fuzzy
+msgctxt "User menu"
+msgid "User Menu"
+msgstr "Панел менюси"
