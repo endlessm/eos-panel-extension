@@ -8,6 +8,7 @@ sources = [
   'utils.js',
 ]
 ui_sources = [
+  'ui/appFavorites.js',
   'ui/appIconBar.js',
   'ui/automaticUpdates.js',
   'ui/endlessButton.js',
