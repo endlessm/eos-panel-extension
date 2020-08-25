@@ -22,6 +22,7 @@ const { GObject } = imports.gi;
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 
+const AppFavoritesWrapper = PanelExtension.imports.ui.appFavorites;
 const LayoutManagerWrapper = PanelExtension.imports.ui.layout;
 const PanelWrapper = PanelExtension.imports.ui.panel;
 const OverviewWrapper = PanelExtension.imports.ui.overview;
@@ -43,6 +44,7 @@ class PanelManager extends GObject.Object {
         OverviewWrapper.enable();
         PanelWrapper.enable();
         LayoutManagerWrapper.enable();
+        AppFavoritesWrapper.enable();
 
         this.enabled = true;
     }
@@ -55,6 +57,7 @@ class PanelManager extends GObject.Object {
         OverviewWrapper.disable();
         PanelWrapper.disable();
         LayoutManagerWrapper.disable();
+        AppFavoritesWrapper.disable();
 
         this.enabled = false;
     }
