@@ -17,7 +17,7 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-const { Shell } = imports.gi;
+const { Meta, Shell } = imports.gi;
 
 const Main = imports.ui.main;
 
@@ -30,21 +30,12 @@ function _fullscreenChanged() {
 }
 
 function getVisibleApps() {
-    const appSystem = Shell.AppSystem.get_default();
-    const runningApps = appSystem.get_running();
-    return runningApps.filter(app => {
-        for (const window of app.get_windows()) {
-            // We do not count transient windows because of an issue with Audacity
-            // where a transient window was always being counted as visible even
-            // though it was minimized
-            if (window.get_transient_for())
-                continue;
+    return global.window_group.get_children().filter(child => {
+        if (!(child instanceof Meta.WindowActor))
+            return false;
 
-            if (!window.minimized)
-                return true;
-        }
-
-        return false;
+        const { metaWindow } = child;
+        return !metaWindow.minimized && !metaWindow.get_transient_for();
     });
 }
 
