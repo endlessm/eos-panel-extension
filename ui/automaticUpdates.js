@@ -82,7 +82,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
 
         this._item = new PopupMenu.PopupSubMenuMenuItem('', true);
         this._toggleItem = this._item.menu.addAction('', this._toggleAutomaticUpdates.bind(this));
-        this._item.menu.addAction(_('Updates Queue'),
+        this._updatesQueueItem = this._item.menu.addAction(_('Updates Queue'),
             () => {
                 const params = new GLib.Variant('(sava{sv})', [
                     'set-mode', [new GLib.Variant('s', 'updates')],
@@ -107,6 +107,9 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
                         }
                     });
             });
+        // Unlike settings action menu items, normal action menu items are not kept
+        // automatically in sync with SessionMode.allowSettings, let's do it manually
+        this._updatesQueueItem.visible = Main.sessionMode.allowSettings;
         this._item.menu.addSettingsAction(_('Set a Schedule'), UPDATES_PANEL_LAUNCHER);
         this.menu.addMenuItem(this._item);
 
@@ -410,6 +413,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
         const state = this._getState();
 
         this._item.visible = state !== AutomaticUpdatesState.DISCONNECTED;
+        this._updatesQueueItem.visible = Main.sessionMode.allowSettings;
         this.visible = state === AutomaticUpdatesState.DOWNLOADING;
     }
 
