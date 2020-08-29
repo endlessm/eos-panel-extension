@@ -17,7 +17,7 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-const { Clutter, GLib, GObject, Meta, Pango, St } = imports.gi;
+const { Clutter, GLib, GObject, Meta, Pango, Shell, St } = imports.gi;
 
 const Main = imports.ui.main;
 const ModalDialog = imports.ui.modalDialog;
