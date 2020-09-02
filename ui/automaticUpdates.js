@@ -189,8 +189,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _sessionUpdated() {
-        const sensitive = !Main.sessionMode.isLocked && !Main.sessionMode.isGreeter;
-        this.menu.setSensitive(sensitive);
+        this._updateVisibility();
         this._sync();
     }
 
@@ -410,9 +409,20 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _updateVisibility() {
+        // Only show panel icon and menu when in a regular session,
+        // not in GDM or initial-setup
+        if (!Main.sessionMode.hasOverview) {
+            this.menu.visible = false;
+            this._item.visible = false;
+            this.visible = false;
+            return;
+        }
+
         const state = this._getState();
 
+        this.menu.visible = true;
         this._item.visible = state !== AutomaticUpdatesState.DISCONNECTED;
+        this._toggleItem.visible = this._activeConnection !== null;
         this._updatesQueueItem.visible = Main.sessionMode.allowSettings;
         this.visible = state === AutomaticUpdatesState.DOWNLOADING;
     }
