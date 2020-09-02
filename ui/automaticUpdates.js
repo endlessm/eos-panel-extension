@@ -272,7 +272,7 @@ class AutomaticUpdatesIndicator extends PanelMenu.SystemIndicator {
     }
 
     _updateNotification() {
-        // Only notify when in an regular session, not in GDM or initial-setup.
+        // Only notify when in a regular session, not in GDM or initial-setup.
         if (!Main.sessionMode.hasOverview)
             return;
 
