@@ -24,6 +24,10 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 const Utils = PanelExtension.imports.utils;
 
 function enable() {
+    Utils.override(AppFavorites.AppFavorites, 'addFavoriteAtPos', function(appId, pos) {
+        this._addFavorite(appId, pos);
+    });
+
     Utils.override(AppFavorites.AppFavorites, 'removeFavorite', function(appId) {
         this._removeFavorite(appId);
     });
