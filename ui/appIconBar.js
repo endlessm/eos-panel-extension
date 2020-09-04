@@ -262,7 +262,7 @@ const AppIconButton = GObject.registerClass({
         'app-icon-unpinned': {},
     },
 }, class AppIconButton extends St.Button {
-    _init(app, iconSize, menuManager, allowsPinning) {
+    _init(app, iconSize, menuManager) {
         this._app = app;
 
         this._iconSize = iconSize;
@@ -298,7 +298,8 @@ const AppIconButton = GObject.registerClass({
         this._rightClickMenu = new PopupMenu.PopupMenu(this, 0.0, St.Side.BOTTOM, 0);
         this._rightClickMenu.blockSourceEvents = true;
 
-        if (allowsPinning) {
+        const canFavorite = global.settings.is_writable('favorite-apps');
+        if (canFavorite) {
             this._pinMenuItem = this._rightClickMenu.addAction(_('Pin to Taskbar'), () => {
                 this.emit('app-icon-pinned');
             });
@@ -896,7 +897,7 @@ const ScrolledIconList = GObject.registerClass({
             return;
 
         const favorites = AppFavorites.getAppFavorites();
-        const newChild = new AppIconButton(app, this._iconSize, this._menuManager, true);
+        const newChild = new AppIconButton(app, this._iconSize, this._menuManager);
 
         newChild.connect('app-icon-pressed', () => {
             this.emit('app-icon-pressed');
