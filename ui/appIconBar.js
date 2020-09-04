@@ -300,11 +300,11 @@ const AppIconButton = GObject.registerClass({
 
         const canFavorite = global.settings.is_writable('favorite-apps');
         if (canFavorite) {
-            this._pinMenuItem = this._rightClickMenu.addAction(_('Pin to Taskbar'), () => {
+            this._pinMenuItem = this._rightClickMenu.addAction(_('Add to Favorites'), () => {
                 this.emit('app-icon-pinned');
             });
 
-            this._unpinMenuItem = this._rightClickMenu.addAction(_('Unpin from Taskbar'), () => {
+            this._unpinMenuItem = this._rightClickMenu.addAction(_('Remove from Favorites'), () => {
                 // Unpin from taskbar in idle, so that we can avoid destroying
                 // the menu actor before it's closed
                 this._unpinIdleId = GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
@@ -323,6 +323,8 @@ const AppIconButton = GObject.registerClass({
                 this._pinMenuItem.actor.visible = !isPinned;
                 this._unpinMenuItem.actor.visible = isPinned;
             });
+
+            this._rightClickMenu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
         }
 
         this._quitMenuItem = this._rightClickMenu.addAction(_('Quit %s').format(this._app.get_name()), () => {
