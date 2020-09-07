@@ -1,28 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# Algimantas Margevičius <gymka@mail.ru>, 2011
-# aurisc4 <aurisc4@gmail.com>, 2013-2017
-# Mantas Kriaučiūnas Baltix <mantas@akl.lt>, 2012-2013
-# Žygimantas Beručka <zygis@gnome.org>, 2010-2012
+# Andre Magalhaes <andre@endlessm.com>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:19+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
-"Language-Team: Lithuanian (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/lt/)\n"
-"Language: lt\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Andre Magalhaes <andre@endlessm.com>, 2020\n"
+"Language-Team: Lithuanian (https://www.transifex.com/endless-os/teams/9016/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < "
-"11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? "
-"1 : n % 1 != 0 ? 2: 3);\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
@@ -106,15 +103,15 @@ msgstr ""
 msgid "Show Apps"
 msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
 msgstr ""
 
@@ -128,10 +125,9 @@ msgid "Power"
 msgstr "Energija"
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistema"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"

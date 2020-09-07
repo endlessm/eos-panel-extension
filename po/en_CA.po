@@ -1,21 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:20+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
-"Language-Team: English (Canada) (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/en_CA/)\n"
-"Language: en_CA\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: English (Canada) (https://www.transifex.com/endless-os/teams/9016/en_CA/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en_CA\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
@@ -50,7 +49,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Automatic Updates"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
@@ -82,7 +81,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Turn On"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
@@ -100,15 +99,15 @@ msgstr ""
 msgid "Show Apps"
 msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
 msgstr ""
 
@@ -122,14 +121,13 @@ msgid "Power"
 msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "System"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Settings"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -141,7 +139,7 @@ msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Help"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

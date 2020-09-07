@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 # Translators:
-# 71aa0e4baa10247739d383a6c8e17052, 2016
-# Roddy Shuler <roddy@stanfordalumni.org>, 2016-2018
-# Sira Nokyoongtong <gumaraa@gmail.com>, 2010-2011
-# Theppitak Karoonboonyanan <thep@linux.thai.net>, 2012
+# Andre Magalhaes <andre@endlessm.com>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 05:15-0300\n"
-"PO-Revision-Date: 2020-04-21 11:29+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>\n"
-"Language-Team: Thai (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/th/)\n"
-"Language: th\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Andre Magalhaes <andre@endlessm.com>, 2020\n"
+"Language-Team: Thai (https://www.transifex.com/endless-os/teams/9016/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/appIconBar.js:216
@@ -64,7 +63,8 @@ msgstr "อัปเดตอัตโนมัติใน"
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
-msgstr "คุณมีอินเตอร์เน็ตแบบไม่จำกัด ระบบจึงเปิดการอัพเดทอัตโนมัติในการเชื่อมต่อนี้"
+msgstr ""
+"คุณมีอินเตอร์เน็ตแบบไม่จำกัด ระบบจึงเปิดการอัพเดทอัตโนมัติในการเชื่อมต่อนี้"
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
@@ -74,7 +74,8 @@ msgstr "การอัพเดทอัตโนมัติถูกปิด
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
-msgstr "คุณจะต้องเลือกว่าจะปรับใช้อัปเดต Endless อันไหนเมื่ออยู่ในการเชื่อมต่อนี้"
+msgstr ""
+"คุณจะต้องเลือกว่าจะปรับใช้อัปเดต Endless อันไหนเมื่ออยู่ในการเชื่อมต่อนี้"
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
@@ -104,15 +105,15 @@ msgstr "แสดงเดสก์ท็อป"
 msgid "Show Apps"
 msgstr "แสดงแอพต่างๆ"
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr "คำสั่งมุมจอ"
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
 msgstr "เปิดใช้ Hot Corner"
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
 msgstr "ปิดการใช้ Hot Corner"
 
@@ -126,10 +127,9 @@ msgid "Power"
 msgstr "เปิด/ปิด"
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "ระบบ"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"

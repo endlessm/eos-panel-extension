@@ -1,45 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Prasadh Baapaat <prasadhbaapaat@gmail.com>, 2016
-# sandeeps <sshedmak@redhat.com>, 2011-2014
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:19+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
-"Language-Team: Marathi (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/mr/)\n"
-"Language: mr\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Marathi (https://www.transifex.com/endless-os/teams/9016/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: mr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "इतर कार्यक्षेत्रे"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "चालू कार्यक्षेत्र"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "टास्कबारवर दाखवा"
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "टास्कबारवरून काढा"
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "%s मधुन बाहेर पडा"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -76,7 +73,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "बंद करा"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
@@ -84,11 +81,11 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "सुरू करा"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "बंद करा"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -102,17 +99,17 @@ msgstr ""
 msgid "Show Apps"
 msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "संवेदनशील कोपरा सक्षम करा"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "संवेदनशील कोपरा अक्षम करा"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
@@ -121,17 +118,16 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "पावर"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "प्रणाली"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "सेटिंग्ज"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -139,11 +135,11 @@ msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "आम्हाला अभिप्राय द्या"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "मदत"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

@@ -1,172 +1,147 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Abner Chay <chay@endlessm.com>, 2019-2020
-# Alejandro Farfán <alejandro@endlessm.com>, 2018
-# Benjamín Valero Espinosa <benjavalero@gmail.com>, 2011
-# c.sanchez <cassandra@endlessm.com>, 2014-2015
-# c.sanchez <cassandra@endlessm.com>, 2014
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010-2016
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2010-2017, 2017
-# Eddy Alegria <eddy@endlessm.com>, 2014
-# goizueta <goizueta@endlessm.com>, 2014
-# goizueta <goizueta@endlessm.com>, 2014
-# Joel Gil León <joel@endlessm.com>, 2013-2014
-# Jorge González <jorgegonz@svn.gnome.org>, 2009-2011
-# Mario Sanchez Prada, 2018
-# Mario Sanchez Prada, 2018
-# Nuritzi Sanchez <ns@endlessm.com>, 2013-2018
-# Philip Chimento <philip.chimento@gmail.com>, 2014
-# Roddy Shuler <roddy@stanfordalumni.org>, 2013-2018
-# Will Thompson <wjt@endlessm.com>, 2020
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 05:15-0300\n"
-"PO-Revision-Date: 2020-04-18 02:39+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/es/)\n"
-"Language: es\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/endless-os/teams/9016/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Otros espacios de trabajo"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Espacio de trabajo actual"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "Clavar en la barra de tareas"
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "Eliminar de la barra de tareas."
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Cerrar %s"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr "Actualizaciones en cola"
+msgstr ""
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr "Establecer un horario"
+msgstr ""
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Actualizaciones automáticas"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr "Actualizaciones automáticas activadas"
+msgstr ""
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
-"Tiene datos ilimitados, por lo que se han activado las actualizaciones "
-"automáticas para esta conexión. "
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
-"Las actualizaciones automáticas están desactivadas para guardar sus datos"
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
-"Deberá elegir qué actualizaciones de Endless desea aplicar cuando está "
-"conectado."
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Cerrar"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr "Cambiar la configuración..."
+msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Encendido"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Apagar"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr "Botón Endless"
+msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr "Mostrar escritorio"
+msgstr ""
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr "Mostrar programas"
+msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr "Esquina activa"
+msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "Permitir la esquina activa"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "Desactivar la esquina activa"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr "No hay programas abiertos"
+msgstr ""
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Energía"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistema"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Configuración"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr "Cuentas sociales"
+msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "Danos tu opinión"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Ayuda"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr "Menú del usuario"
+msgstr ""

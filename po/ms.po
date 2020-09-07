@@ -1,156 +1,147 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# abuyop <abuyop@gmail.com>, 2019-2020
-# Andi Rady Kurniawan <niariot87@gmail.com>, 2011
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 05:15-0300\n"
-"PO-Revision-Date: 2020-04-25 07:40+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>\n"
-"Language-Team: Malay (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/ms/)\n"
-"Language: ms\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Malay (https://www.transifex.com/endless-os/teams/9016/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Lain-lain ruang kerja"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Ruang kerja semasa"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "Cemat ke Palang Tugas"
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "Tanggalkan daripada Palang Tugas"
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Tutup %s"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr "Baris Gilir Kemaskini"
+msgstr ""
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr "Tetapkan satu Jadual"
+msgstr ""
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Kemaskini Automatik"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr "Kemaskini automatik hidup"
+msgstr ""
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
-"Anda mempunyai Data Tanpa Had maka kemaskini automatik telah dihidupkan bagi "
-"sambungan ini."
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
-"Kemaskini-kemaskini automatik telah dimatikan untuk menjimatkan data anda"
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
-"Anda perlu memilih kemaskini-kemaskini Endless yang manakah untuk diterapkan "
-"kepada sambungan ini."
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Tutup"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr "Ubah Tetapan..."
+msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Hidup"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Mati"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr "Butang Endless"
+msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr "Tunjuk Atas Meja"
+msgstr ""
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr "Tunjuk Apl"
+msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr "Bucu Panas"
+msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "Benarkan Bucu Panas"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "Lumpuhkan Bucu Panas"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr "Tiada apl dibuka"
+msgstr ""
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Kuasa"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistem"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Tetapan"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr "Akaun-Akaun Sosial"
+msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "Beri Maklumbalas"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Bantuan"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr "Menu Pengguna"
+msgstr ""

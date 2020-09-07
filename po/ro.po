@@ -1,53 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Daniel Șerbănescu <cyber19rider@gmail.com>, 2010-2011
-# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2015,2018
-# georgian balan <braila222@gmail.com>, 2016-2018
-# Ion Laurențiu Cristian <me_lawr@yahoo.com>, 2010
-# laurion <me_lawr@yahoo.com>, 2010
-# Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2009-2011
-# Viorel-Cătălin Răpițeanu <rapiteanu.catalin@gmail.com>, 2013
-# Roddy Shuler <roddy@stanfordalumni.org>, 2017-2018
-# Viorel-Cătălin Răpițeanu <rapiteanu.catalin@gmail.com>, 2013-2014
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:19+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/ro/)\n"
-"Language: ro\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Romanian (https://www.transifex.com/endless-os/teams/9016/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1));\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Alte spatii de lucru"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Spatiu de lucru curent"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "Lipeste de Taskbar"
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "Sterge din Taskbar"
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Închide %s"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -60,7 +49,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Actualizări automate"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
@@ -84,7 +73,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Închide"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
@@ -92,68 +81,67 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Pornește"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Oprește"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr "Buton Endless"
+msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr "Arata Desktop"
+msgstr ""
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr "Arata Aplicatii"
+msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr "Colt Fierbinte"
+msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "Porneste Colt"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "Opreste Colt"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr "Nici o aplicatie deschisa"
+msgstr ""
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Pornire"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistem"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Configurări"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr "Conturi Sociale"
+msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "Lasa-ne o parere"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Ajutor"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr "Meniu Utilizator"
+msgstr ""

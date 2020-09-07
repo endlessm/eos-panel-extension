@@ -1,23 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Dr.T.Vasudevan <agnihot3@gmail.com>, 2010-2012
-# shkumar <shkumar@redhat.com>, 2013-2014
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:19+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
-"Language-Team: Tamil (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/ta/)\n"
-"Language: ta\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Tamil (https://www.transifex.com/endless-os/teams/9016/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
@@ -76,7 +73,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "மூடுக"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
@@ -84,11 +81,11 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "செயற்படுத்து"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "முடக்கு"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -102,15 +99,15 @@ msgstr ""
 msgid "Show Apps"
 msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
 msgstr ""
 
@@ -121,17 +118,16 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "மின்சக்தி"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "கணினி"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "அமைப்புகள்"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -143,7 +139,7 @@ msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "உதவி"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

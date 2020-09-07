@@ -1,58 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Bernd Homuth <dev@hmt.im>, 2014-2015, 2016,2019
-# Christian Kirbach <christian.kirbach@gmail.com>, 2009-2013
-# Franco Della-Monica <franco.della.monica@gmail.com>, 2016
-# Hendrik Brandt <heb@gnome-de.org>, 2009
-# Hendrik Richter <hendrikr@gnome.org>, 2009-2011
-# Jakob Kramer <jakob.kramer@gmx.de>, 2010
-# Mario Klug <mario@klug.me>, 2010
-# Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2010-2011
-# Robert Güntherberg <guenthro@hs-albsig.de>, 2018
-# Roddy Shuler <roddy@stanfordalumni.org>, 2017
-# Stefan Schroeder <ondekoza@gmail.com>, 2016
-# Tim, 2018
-# Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012-2013
-# Wolfgang Stöggl <c72578@yahoo.de>, 2012,2014,2017
-# Wolfgang Stöggl <c72578@yahoo.de>, 2020
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-17 16:23+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
-"Language-Team: German (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/de/)\n"
-"Language: de\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: German (https://www.transifex.com/endless-os/teams/9016/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Andere Arbeitsflächen"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Aktuelle Arbeitsfläche"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "An Aufgabenleiste anpinnen."
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "Von Aufgabenleiste entfernen"
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Verlassen von %s"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -65,7 +49,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Automatische Updates Aus"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
@@ -79,7 +63,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
-msgstr "Automatische Updates sind deaktiviert um dein Datenvolumen zu schützen"
+msgstr ""
 
 #: ui/automaticUpdates.js:312
 msgid ""
@@ -89,19 +73,19 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Schließen"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr "Einstellungen ändern"
+msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Einschalten"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Ausschalten"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -109,23 +93,23 @@ msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr "Desktop anzeigen"
+msgstr ""
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr "Apps anzeigen"
+msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "Hot-Corner einschalten"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "Hot-Corner ausschalten"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
@@ -134,17 +118,16 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Ausschalten"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "System"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -152,11 +135,11 @@ msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "Gib uns Feedback"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Hilfe"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

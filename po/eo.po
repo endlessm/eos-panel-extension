@@ -1,29 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Carmen Bianca Bakker <carmen@carmenbianca.eu>, 2018-2019
-# Daniel PUENTES <blatberk@openmailbox.org>, 2015
-# kristjan <kristjan.schmidt@googlemail.com>, 2011-2012,2015-2016,2018
-# Nicolas MAIA < >, 2015
-# Roddy Shuler <roddy@stanfordalumni.org>, 2017
-# Ryan LORTIE <desrt@desrt.ca>, 2013
-# Tiffany Antopolski <tiffany.antopolski@gmail.com>, 2011-2012
-# Tiffany ANTOPOLSKI <tiffany.antopolski@gmail.com>, 2011-2012
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-24 16:40-0300\n"
-"PO-Revision-Date: 2020-04-24 13:18+0000\n"
-"Last-Translator: Vicki Niu <vicki@endlessm.com>\n"
-"Language-Team: Esperanto (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/eo/)\n"
-"Language: eo\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Esperanto (https://www.transifex.com/endless-os/teams/9016/eo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: eo\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/appIconBar.js:216
@@ -58,7 +49,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Aŭtomataj ĝisdatigoj"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
@@ -82,7 +73,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Fermi"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
@@ -90,11 +81,11 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Ŝalti"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Malŝalti"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -108,15 +99,15 @@ msgstr ""
 msgid "Show Apps"
 msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
 msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
 msgstr ""
 
@@ -127,17 +118,16 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Elektro"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistemo"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Agordoj"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -149,7 +139,7 @@ msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Helpi"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

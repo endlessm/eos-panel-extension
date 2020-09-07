@@ -1,167 +1,147 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the eos-panel-extension package.
-#
-# Translators:
-# Andika Triwidada <andika@gmail.com>, 2010-2014,2017
-# dirgita <dirgitadevina@yahoo.co.id>, 2011-2012,2014
-# Hartono <hartono.s10@gmail.com>, 2016-2017
-# Helmi Fauzian <helmi@endlessm.com>, 2019
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017-2019
-# Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018
-# Mario Sanchez Prada, 2018
-# Mario Sanchez Prada, 2018
-# Nieke Adriani <nieke@endlessm.com>, 2019
-# Roddy Shuler <roddy@stanfordalumni.org>, 2016-2018
-# Septira Taruna <septira@endlessm.com>, 2017-2018
-# Sucipto <sucipto@pm.me>, 2020
-# Wibiharto <wibinem@yahoo.com>, 2011
-# Will Thompson <wjt@endlessm.com>, 2019
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-22 05:15-0300\n"
-"PO-Revision-Date: 2020-04-17 16:22+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>\n"
-"Language-Team: Indonesian (http://www.transifex.com/endless-os/eos-panel-extension/"
-"language/id/)\n"
-"Language: id\n"
+"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Language-Team: Indonesian (https://www.transifex.com/endless-os/teams/9016/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Layar kerja lainnya"
+msgstr ""
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Layar kerja saat ini"
+msgstr ""
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "Sematkan ke Taskbar"
+msgstr ""
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr "Lepaskan dari Taskbar"
+msgstr ""
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Keluar %s"
+msgstr ""
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr "Antrian Pembaruan"
+msgstr ""
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr "Atur Jadwal"
+msgstr ""
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr "Pembaruan Otomatis"
+msgstr ""
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr "Pembaruan otomatis nyala"
+msgstr ""
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
-"Anda memiliki Data Tak Terbatas hingga pembaruan otomatis telah dinyalakan "
-"pada koneksi ini."
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
-msgstr "Pembaruan otomatis dimatikan untuk menghemat data Anda"
+msgstr ""
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
-"Anda perlu memilih pembaruan Endless mana yang akan diterapkan saat berada "
-"pada koneksi ini."
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr "Tutup"
+msgstr ""
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr "Ganti Pengaturan..."
+msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr "Nyalakan"
+msgstr ""
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr "Matikan"
+msgstr ""
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr "Tombol Endless"
+msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr "Tampilkan Desktop"
+msgstr ""
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr "Tampilkan Aplikasi"
+msgstr ""
 
-#: ui/hotCorner.js:51
+#: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr "Pojok Aktif"
+msgstr ""
 
-#: ui/hotCorner.js:63
+#: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr "Aktifkan Pojok Aktif"
+msgstr ""
 
-#: ui/hotCorner.js:67
+#: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr "Nonaktifkan Pojok Aktif"
+msgstr ""
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr "Tidak ada aplikasi yang terbuka"
+msgstr ""
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr "Daya"
+msgstr ""
 
 #: ui/systemMenu.js:38
-#, fuzzy
 msgctxt "System menu"
 msgid "System"
-msgstr "Sistem"
+msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr "Pengaturan"
+msgstr ""
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr "Akun Sosial"
+msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr "Beri Masukan Kepada Kami"
+msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr "Bantuan"
+msgstr ""
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr "Menu Pengguna"
+msgstr ""
