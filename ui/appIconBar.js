@@ -731,10 +731,14 @@ const ScrolledIconList = GObject.registerClass({
 
     setActiveApp(app) {
         this._taskbarApps.forEach((appButton, taskbarApp) => {
-            if (app === taskbarApp)
-                appButton.add_style_pseudo_class('highlighted');
-            else
-                appButton.remove_style_pseudo_class('highlighted');
+            if (app === taskbarApp) {
+                // Also set it to running here just in case this method is invoked
+                // before the app-state-changed signal handlers
+                appButton.add_style_pseudo_class('running');
+                appButton.add_style_pseudo_class('active');
+            } else {
+                appButton.remove_style_pseudo_class('active');
+            }
 
             appButton.queue_redraw();
         });
@@ -922,7 +926,9 @@ const ScrolledIconList = GObject.registerClass({
 
         this._container.insert_child_at_index(newChild, position);
 
-        if (app.state == Shell.AppState.STOPPED &&
+        if (app.state == Shell.AppState.RUNNING) {
+            newChild.add_style_pseudo_class('running');
+        } if (app.state == Shell.AppState.STOPPED &&
             (this._parentalControlsManager &&
              !this._parentalControlsManager.shouldShowApp(app.get_app_info()))) {
             newChild.hide();
@@ -947,6 +953,9 @@ const ScrolledIconList = GObject.registerClass({
         case Shell.AppState.RUNNING:
             this._addButton(app);
             this._ensureIsVisible(app);
+            const appButton = this._taskbarApps.get(app);
+            if (appButton)
+                appButton.add_style_pseudo_class('running');
             break;
 
         case Shell.AppState.STOPPED: {
@@ -954,6 +963,7 @@ const ScrolledIconList = GObject.registerClass({
             if (!appButton)
                 break;
 
+            appButton.remove_style_pseudo_class('running');
             if (AppFavorites.getAppFavorites().isFavorite(app.get_id())) {
                 if (this._parentalControlsManager &&
                     !this._parentalControlsManager.shouldShowApp(app.get_app_info()))

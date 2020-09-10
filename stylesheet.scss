@@ -80,7 +80,12 @@ popup-separator-menu-item {
 
 .app-icon-button {
     background: none;
-    &:highlighted {
+
+    &:running {
+        background-image: url("data/icons/mini-icon-running-indicator.png");
+        background-position: 2px 34px;
+    }
+    &:running:active {
         background-image: url("data/icons/mini-icon-active-indicator.png");
         background-position: 2px 34px;
     }

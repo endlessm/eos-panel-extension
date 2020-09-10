@@ -38,6 +38,7 @@ icons = [
   'data/icons/hot-corner-symbolic.svg',
   'data/icons/hot-corner-rtl-symbolic.svg',
   'data/icons/mini-icon-active-indicator.png',
+  'data/icons/mini-icon-running-indicator.png',
 ]
 dbus_interfaces = [
   'data/dbus-interfaces/com.endlessm.DownloadManager1.Scheduler.xml',
