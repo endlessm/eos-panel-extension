@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the eos-panel-extension package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Will Thompson <wjt@endlessm.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 18:26-0300\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
 "Language-Team: Chinese (Taiwan) (https://www.transifex.com/endless-os/teams/9016/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,106 +23,106 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr ""
+msgstr "其他的工作空間"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr ""
+msgstr "目前的工作空間"
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr ""
+msgstr "釘選至工作列"
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr ""
+msgstr "從工作列取消釘選"
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr ""
+msgstr "退出 %s"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr ""
+msgstr "更新隊列"
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr ""
+msgstr "設定時間表"
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr ""
+msgstr "自動更新"
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr ""
+msgstr "自動更新已開啟"
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
-msgstr ""
+msgstr "你可以使用無限數據，因此已開啟自動更新功能。"
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
-msgstr ""
+msgstr "已關閉自動更新功能以節省你的數據用量"
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
-msgstr ""
+msgstr "你需要選擇在此連線上執行哪些 Endless 更新。"
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr ""
+msgstr "關閉"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr ""
+msgstr "變更設定……"
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr ""
+msgstr "開啟"
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr ""
+msgstr "關閉"
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr ""
+msgstr "Endless 按鈕"
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr ""
+msgstr "顯示桌面"
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr ""
+msgstr "顯示應用程式"
 
 #: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr ""
+msgstr "熱角"
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "啟用熱角"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "禁用 Hot Corner"
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr ""
+msgstr "沒有打開任何應用程式"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "電源"
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"
@@ -127,21 +131,21 @@ msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr ""
+msgstr "設定值"
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr ""
+msgstr "社群帳戶"
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr ""
+msgstr "給我們回饋意見"
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr ""
+msgstr "說明"
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr ""
+msgstr "用戶選單"

@@ -24,15 +24,15 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr "Outras áreas de trabalho"
+msgstr "Outras áreas de trabalho  "
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Área de trabalho atual"
+msgstr "Área de trabalho atual "
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr "Fixar a barra de tarefas"
+msgstr "Afixar na barra de tarefas"
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
@@ -41,7 +41,7 @@ msgstr "Desafixar da barra de tarefas"
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr "Sair %s"
+msgstr "Fechar %s"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -58,27 +58,27 @@ msgstr "Atualizações Automáticas"
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr "Atualizações automáticas em"
+msgstr "Atualizações automáticas ligadas"
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
-"Você tem dados ilimitados, portanto, as atualizações automáticas foram "
-"ativadas para esta conexão."
+"Você tem Dados Ilimitados, então as atualizações automáticas foram ativadas "
+"para essa conexão."
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
-msgstr "As atualizações automáticas são desativadas para salvar seus dados"
+msgstr "As atualizações automáticas estão desativadas para salvar seus dados"
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
-"Você precisará escolher quais atualizações Endless aplicar quando estiver "
-"nesta conexão."
+"Você precisará escolher quais atualizações do Endless aplicar quando estiver"
+" nessa conexão."
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
@@ -86,7 +86,7 @@ msgstr "Fechar"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr "Mudar configurações…"
+msgstr "Mudar Configurações..."
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
@@ -110,24 +110,24 @@ msgstr "Mostrar aplicativos"
 
 #: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr ""
+msgstr "Hot Corner"
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "Ative o Canto de Tela"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "Desative o Canto de Tela"
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr "Nenhum aplicativo está aberto"
+msgstr "Nenhum aplicativo aberto"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "Ligar"
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"

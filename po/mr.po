@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the eos-panel-extension package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Will Thompson <wjt@endlessm.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 18:26-0300\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
 "Language-Team: Marathi (https://www.transifex.com/endless-os/teams/9016/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,24 +23,24 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr ""
+msgstr "इतर कार्यक्षेत्रे"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr ""
+msgstr "चालू कार्यक्षेत्र"
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr ""
+msgstr "टास्कबारवर दाखवा"
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr ""
+msgstr "टास्कबारवरून काढा"
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr ""
+msgstr "%s मधुन बाहेर पडा"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -73,7 +77,7 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr ""
+msgstr "बंद करा"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
@@ -81,11 +85,11 @@ msgstr ""
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr ""
+msgstr "सुरू करा"
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr ""
+msgstr "बंद करा"
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -105,11 +109,11 @@ msgstr ""
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "संवेदनशील कोपरा सक्षम करा"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "संवेदनशील कोपरा अक्षम करा"
 
 #: ui/overview.js:48
 msgid "No apps are open"
@@ -118,7 +122,7 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "पावर"
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"
@@ -127,7 +131,7 @@ msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्ज"
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -135,11 +139,11 @@ msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr ""
+msgstr "आम्हाला अभिप्राय द्या"
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr ""
+msgstr "मदत"
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

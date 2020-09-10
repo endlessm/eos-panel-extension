@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the eos-panel-extension package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Will Thompson <wjt@endlessm.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 18:26-0300\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/endless-os/teams/9016/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,41 +23,41 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr ""
+msgstr "További munkaasztalok"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr ""
+msgstr "Jelenlegi munkaasztal"
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr ""
+msgstr "Rögzítés tálcára"
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr ""
+msgstr "Leválasztás a tálcáról"
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr ""
+msgstr "%s bezárása"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr ""
+msgstr "Frissítési várólista"
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr ""
+msgstr "Ütemezés beállítása"
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Automatikus frissítések"
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr ""
+msgstr "Automatikus frissítések: BE"
 
 #: ui/automaticUpdates.js:308
 msgid ""
@@ -73,52 +77,52 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr ""
+msgstr "Beállítások módosítása..."
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr ""
+msgstr "Bekapcsolás"
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr ""
+msgstr "Kikapcsolás"
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr ""
+msgstr "Endless gomb"
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr ""
+msgstr "Asztal megjelenítése"
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr ""
+msgstr "Alkalmazások megjelenítése"
 
 #: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr ""
+msgstr "Aktív sarok"
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "Aktív sarok engedélyezése"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "Aktív sarok kikapcsolása"
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr ""
+msgstr "Nincsenek nyitott alkalmazások"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "Kikapcsolás"
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"
@@ -127,11 +131,11 @@ msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr ""
+msgstr "Közösségi kapcsolatok"
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
@@ -139,9 +143,9 @@ msgstr ""
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr ""
+msgstr "Felhasználói menü"

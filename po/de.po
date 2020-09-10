@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the eos-panel-extension package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Will Thompson <wjt@endlessm.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 18:26-0300\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
 "Language-Team: German (https://www.transifex.com/endless-os/teams/9016/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,24 +23,24 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr ""
+msgstr "Andere Arbeitsflächen"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr ""
+msgstr "Aktuelle Arbeitsfläche"
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr ""
+msgstr "An Aufgabenleiste anpinnen."
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr ""
+msgstr "Von Aufgabenleiste entfernen"
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr ""
+msgstr "Verlassen von %s"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
@@ -49,7 +53,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Automatische Updates Aus"
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
@@ -64,6 +68,7 @@ msgstr ""
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
+"Automatische Updates sind deaktiviert um dein Datenvolumen zu schützen"
 
 #: ui/automaticUpdates.js:312
 msgid ""
@@ -73,19 +78,19 @@ msgstr ""
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr ""
+msgstr "Einstellungen ändern"
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr ""
+msgstr "Einschalten"
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr ""
+msgstr "Ausschalten"
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
@@ -93,11 +98,11 @@ msgstr ""
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr ""
+msgstr "Desktop anzeigen"
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr ""
+msgstr "Apps anzeigen"
 
 #: ui/hotCorner.js:44
 msgid "Hot Corner"
@@ -105,11 +110,11 @@ msgstr ""
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "Hot-Corner einschalten"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "Hot-Corner ausschalten"
 
 #: ui/overview.js:48
 msgid "No apps are open"
@@ -118,7 +123,7 @@ msgstr ""
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "Ausschalten"
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"
@@ -127,7 +132,7 @@ msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
@@ -135,11 +140,11 @@ msgstr ""
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr ""
+msgstr "Gib uns Feedback"
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr ""
+msgstr "Hilfe"
 
 #: ui/userMenu.js:261
 msgctxt "User menu"

@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the eos-panel-extension package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Will Thompson <wjt@endlessm.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-04 18:26-0300\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
+"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/endless-os/teams/9016/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,106 +23,110 @@ msgstr ""
 
 #: ui/appIconBar.js:216
 msgid "Other workspaces"
-msgstr ""
+msgstr "Sehemu nyingine za kazi"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr ""
+msgstr "Sehemu ya  kazi sasa"
 
 #: ui/appIconBar.js:302
 msgid "Pin to Taskbar"
-msgstr ""
+msgstr "Ongeza kwa Taskbar"
 
 #: ui/appIconBar.js:306
 msgid "Unpin from Taskbar"
-msgstr ""
+msgstr "Ondoa kwenye Taskbar"
 
 #: ui/appIconBar.js:327
 #, javascript-format
 msgid "Quit %s"
-msgstr ""
+msgstr "Ondoka/Wachana%s"
 
 #: ui/automaticUpdates.js:85
 msgid "Updates Queue"
-msgstr ""
+msgstr "Sasisha Foleni"
 
 #: ui/automaticUpdates.js:110
 msgid "Set a Schedule"
-msgstr ""
+msgstr "Weka Mpangilio"
 
 #. The status label
 #: ui/automaticUpdates.js:243
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Sasisho za moja kwa moja"
 
 #: ui/automaticUpdates.js:307
 msgid "Automatic updates on"
-msgstr ""
+msgstr "Sasisho otomatiki kwenye"
 
 #: ui/automaticUpdates.js:308
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
+"Una data isiyo na kikomo kwa hivyo sasisho otomatiki zimewashwa kwa "
+"unganisho hili."
 
 #: ui/automaticUpdates.js:311
 msgid "Automatic updates are turned off to save your data"
-msgstr ""
+msgstr "Sasisho otomatiki zimezimwa ili kuhifadhi data yako"
 
 #: ui/automaticUpdates.js:312
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
+"Utahitaji kuchagua ni sasisho zipi ambazo hazina mwisho kutumia wakati huu "
+"kwenye unganisho hili."
 
 #: ui/automaticUpdates.js:332
 msgid "Close"
-msgstr ""
+msgstr "Funga"
 
 #: ui/automaticUpdates.js:336
 msgid "Change Settings…"
-msgstr ""
+msgstr "Badilisha Mipangilio…"
 
 #: ui/automaticUpdates.js:362
 msgid "Turn On"
-msgstr ""
+msgstr "Washa"
 
 #: ui/automaticUpdates.js:364
 msgid "Turn Off"
-msgstr ""
+msgstr "Kuzima"
 
 #: ui/endlessButton.js:35
 msgid "Endless Button"
-msgstr ""
+msgstr "Kitufe cha Endless"
 
 #: ui/endlessButton.js:88
 msgid "Show Desktop"
-msgstr ""
+msgstr "Onyesha Desktop"
 
 #: ui/endlessButton.js:90
 msgid "Show Apps"
-msgstr ""
+msgstr "Onyesha Programu"
 
 #: ui/hotCorner.js:44
 msgid "Hot Corner"
-msgstr ""
+msgstr "Kona ya moto"
 
 #: ui/hotCorner.js:60
 msgid "Enable Hot Corner"
-msgstr ""
+msgstr "Washa Kona ya Moto"
 
 #: ui/hotCorner.js:64
 msgid "Disable Hot Corner"
-msgstr ""
+msgstr "Lemaza Kona ya Moto"
 
 #: ui/overview.js:48
 msgid "No apps are open"
-msgstr ""
+msgstr "Hakuna programu zimefunguliwa."
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
 msgid "Power"
-msgstr ""
+msgstr "Washa."
 
 #: ui/systemMenu.js:38
 msgctxt "System menu"
@@ -127,21 +135,21 @@ msgstr ""
 
 #: ui/userMenu.js:35
 msgid "Settings"
-msgstr ""
+msgstr "Mipangilio"
 
 #: ui/userMenu.js:40
 msgid "Social Accounts"
-msgstr ""
+msgstr "Akaunti za Jamii"
 
 #: ui/userMenu.js:43
 msgid "Give Us Feedback"
-msgstr ""
+msgstr "Tupe Maoni"
 
 #: ui/userMenu.js:46
 msgid "Help"
-msgstr ""
+msgstr "Msaada"
 
 #: ui/userMenu.js:261
 msgctxt "User menu"
 msgid "User Menu"
-msgstr ""
+msgstr "Menyu ya Mtumiaji."
