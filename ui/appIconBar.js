@@ -1,5 +1,5 @@
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
-/* exported AppIconBar */
+/* exported AppIconBar, AppIconButton, ScrolledIconList */
 /*
  * Copyright © 2020 Endless OS Foundation LLC
  *
@@ -255,7 +255,7 @@ const AppIconMenu = class extends PopupMenu.PopupMenu {
  *
  * This class handles the application icon
  */
-const AppIconButton = GObject.registerClass({
+var AppIconButton = GObject.registerClass({
     Signals: {
         'app-icon-pressed': {},
         'app-icon-pinned': {},
@@ -602,7 +602,7 @@ class AppIconBarNavButton extends St.Button {
     }
 });
 
-const ScrolledIconList = GObject.registerClass({
+var ScrolledIconList = GObject.registerClass({
     Signals: {
         'icons-scrolled': {},
         'app-icon-pressed': {},
