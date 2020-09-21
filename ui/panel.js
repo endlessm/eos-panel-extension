@@ -17,8 +17,9 @@
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  */
 
-const { Clutter } = imports.gi;
+const { Clutter, St } = imports.gi;
 
+const CtrlAltTab = imports.ui.ctrlAltTab;
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
 
@@ -173,6 +174,29 @@ function enable() {
     });
 
     const panel = Main.panel;
+
+    Main.ctrlAltTabManager.removeGroup(panel);
+    Main.ctrlAltTabManager.addGroup(
+        panel, _("Bottom Bar"), 'focus-top-bar-symbolic',
+        { sortGroup: CtrlAltTab.SortGroup.TOP });
+    // workaround to get the added item
+    const items = Main.ctrlAltTabManager._items;
+    const ctrlAltTabPanelItem = items[items.length - 1];
+    Utils.override(CtrlAltTab.CtrlAltTabManager, 'popup', function(backward, binding, mask) {
+        // workaround to set the icon using the same icon as upstream but
+        // flipped vertically - setting item.iconActor only works during popup()
+        // as the new icon will be destroyed once the popup closes so we set it here.
+        const icon = new St.Icon({ icon_name: ctrlAltTabPanelItem.iconName,
+                                   icon_size: CtrlAltTab.POPUP_APPICON_SIZE });
+        // flip the icon
+        icon.set_pivot_point(0.5, 0.5);
+        icon.set_rotation_angle(Clutter.RotateAxis.X_AXIS, 180);
+        ctrlAltTabPanelItem.iconActor = icon;
+
+        const original = Utils.original(CtrlAltTab.CtrlAltTabManager, 'popup');
+        original.bind(this)(backward, binding, mask);
+    });
+
     // workaround to make sure the overriden Panel._updatePanel is
     // invoked when the session mode is updated. The original signal
     // connection uses 'bind' which circumvents the override mechanism here
@@ -202,10 +226,18 @@ function disable() {
     }
     _extraIndicators = [];
 
+    const panel = Main.panel;
+
+    Utils.restore(CtrlAltTab.CtrlAltTabManager);
+    Main.ctrlAltTabManager.removeGroup(panel);
+    Main.ctrlAltTabManager.addGroup(
+        panel, _("Top Bar"), 'focus-top-bar-symbolic',
+        { sortGroup: CtrlAltTab.SortGroup.TOP });
+
     if (_sessionModeUpdatedId) {
         Main.sessionMode.disconnect(_sessionModeUpdatedId);
         _sessionModeUpdatedId = 0;
     }
 
-    Main.panel._updatePanel();
+    panel._updatePanel();
 }
