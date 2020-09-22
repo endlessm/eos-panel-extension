@@ -877,9 +877,21 @@ var ScrolledIconList = GObject.registerClass({
     }
 
     _reloadFavorites() {
-        const favorites = AppFavorites.getAppFavorites().getFavorites();
+        const appFavorites = AppFavorites.getAppFavorites();
+        const taskbarApps = this._taskbarApps.entries();
+        for (const [app, appButton] of taskbarApps) {
+            if (app.state === Shell.AppState.STOPPED &&
+                !appFavorites.isFavorite(app.get_id())) {
+                appButton.destroy();
+                this._taskbarApps.delete(app);
+            }
+        }
+
+        const favorites = appFavorites.getFavorites();
         for (let i = 0; i < favorites.length; i++)
             this._ensureButton(favorites[i], i);
+
+        this._updatePage();
     }
 
     _ensureButton(app, position) {
@@ -913,11 +925,7 @@ var ScrolledIconList = GObject.registerClass({
         });
         newChild.connect('app-icon-unpinned', () => {
             favorites.removeFavorite(app.get_id());
-            if (app.state === Shell.AppState.STOPPED) {
-                newChild.destroy();
-                this._taskbarApps.delete(app);
-                this._updatePage();
-            } else {
+            if (app.state !== Shell.AppState.STOPPED) {
                 this._container.set_child_at_index(newChild,
                     this._taskbarApps.size);
             }
