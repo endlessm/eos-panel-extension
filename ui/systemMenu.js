@@ -73,6 +73,7 @@ class SystemMenu extends PanelMenu.Button {
         this._automaticUpdates = new AutomaticUpdates.Indicator();
         this._thunderbolt = new imports.ui.status.thunderbolt.Indicator();
 
+        this._indicators.add_child(this._remoteAccess);
         this._indicators.add_child(this._thunderbolt);
         this._indicators.add_child(this._nightLight);
         this._indicators.add_child(this._automaticUpdates);
@@ -82,7 +83,6 @@ class SystemMenu extends PanelMenu.Button {
             this._indicators.add_child(this._bluetooth);
         if (this._payg)
             this._indicators.add_child(this._payg);
-        this._indicators.add_child(this._remoteAccess);
         this._indicators.add_child(this._rfkill);
         this._indicators.add_child(this._volume);
         this._indicators.add_child(this._brightness);
