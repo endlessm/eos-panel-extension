@@ -20,6 +20,7 @@ ui_sources = [
   'ui/panelMenu.js',
   'ui/power.js',
   'ui/powerButton.js',
+  'ui/remoteAccess.js',
   'ui/systemMenu.js',
   'ui/userMenu.js',
   'ui/workspaceMonitor.js',
