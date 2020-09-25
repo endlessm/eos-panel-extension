@@ -4,16 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessm.com>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# 25c299dc371da5bff014f86901f492aa, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
+"Last-Translator: 25c299dc371da5bff014f86901f492aa, 2020\n"
 "Language-Team: Hindi (https://www.transifex.com/endless-os/teams/9016/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +31,15 @@ msgstr "अन्य कार्यस्थल"
 msgid "Current workspace"
 msgstr "मौजूदा कार्यस्थल"
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "टास्कबार में पिन करें"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "पसंदीदा में जोड़ें"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "टास्कबार से अनपिन करें"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "पसंदीदा से हटाएँ"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "%s से बाहर निकलें"
@@ -46,20 +48,20 @@ msgstr "%s से बाहर निकलें"
 msgid "Updates Queue"
 msgstr "अपडेट्स की कतार"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "एक अनुसूची सेट करें"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "अपने आप अपडेट"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "पर स्वचालित अपडेट"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
@@ -67,30 +69,30 @@ msgstr ""
 "आपके पास असीमित डेटा है इसलिए इस कनेक्शन के लिए स्वचालित अपडेट चालू किए गए "
 "हैं"
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr "आपके डेटा को सेव करने के लिए स्वचालित अपडेट बंद कर दिए जाते हैं"
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
 "जब आप इस कनेक्शन पर हैं तो आपको चुनना होगा कि कौन सा एंडलेस अपडेट लागू होगा."
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "बंद करें"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "सेटिंग्स बदलें..."
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "चालू करें"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "बन्द करें"
 
@@ -121,6 +123,14 @@ msgstr "हॉट कॉर्नर को निष्क्रिय कर�
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "कोई एप्लिकेशन खुली नहीं हैं"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "तल की पट्टी"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "शीर्ष पट्टी"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

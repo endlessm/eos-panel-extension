@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessm.com>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
 # abuyop <abuyop@gmail.com>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: abuyop <abuyop@gmail.com>, 2020\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
 "Language-Team: Malay (https://www.transifex.com/endless-os/teams/9016/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,15 +31,15 @@ msgstr "Lain-lain ruang kerja"
 msgid "Current workspace"
 msgstr "Ruang kerja semasa"
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "Cemat ke Palang Tugas"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "Tambah ke Kegemaran"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "Tanggalkan daripada Palang Tugas"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "Buang daripada Kegemaran"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "Tutup %s"
@@ -47,20 +48,20 @@ msgstr "Tutup %s"
 msgid "Updates Queue"
 msgstr "Baris Gilir Kemaskini"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "Tetapkan satu Jadual"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "Kemaskini Automatik"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "Kemaskini automatik hidup"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
@@ -68,12 +69,12 @@ msgstr ""
 "Anda mempunyai Data Tanpa Had maka kemaskini automatik telah dihidupkan bagi"
 " sambungan ini."
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
 "Kemaskini-kemaskini automatik telah dimatikan untuk menjimatkan data anda"
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
@@ -81,19 +82,19 @@ msgstr ""
 "Anda perlu memilih kemaskini-kemaskini Endless yang manakah untuk diterapkan"
 " kepada sambungan ini."
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "Tutup"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "Ubah Tetapan..."
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "Hidup"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "Mati"
 
@@ -124,6 +125,14 @@ msgstr "Lumpuhkan Bucu Panas"
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "Tiada apl dibuka"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "Palang Bawah"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "Bar Atas"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

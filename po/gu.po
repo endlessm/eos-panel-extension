@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Andre Magalhaes <andre@endlessm.com>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Andre Magalhaes <andre@endlessm.com>, 2020\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
 "Language-Team: Gujarati (https://www.transifex.com/endless-os/teams/9016/gu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +30,15 @@ msgstr ""
 msgid "Current workspace"
 msgstr ""
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr ""
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "પસંદીદાને ઉમેરો"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr ""
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "પસંદીદાઓ માંથી દૂર કરો"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr ""
@@ -46,48 +47,48 @@ msgstr ""
 msgid "Updates Queue"
 msgstr ""
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr ""
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr ""
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr ""
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "બંધ કરો"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr ""
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "ચાલુ કરો"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "બંધ કરો"
 
@@ -118,6 +119,14 @@ msgstr ""
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr ""
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr ""
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "ટોચની પટ્ટી"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

@@ -5,16 +5,18 @@
 # 
 # Translators:
 # Leandro Stanger <leandrostanger@hotmail.com>, 2020
-# Will Thompson <wjt@endlessm.com>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# Mariana Barbosa <mariana@endlessm.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
+"Last-Translator: Mariana Barbosa <mariana@endlessm.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/endless-os/teams/9016/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,15 +32,15 @@ msgstr "Outras áreas de trabalho  "
 msgid "Current workspace"
 msgstr "Área de trabalho atual "
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "Afixar na barra de tarefas"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "Adicionar aos favoritos"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "Desafixar da barra de tarefas"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "Remover dos favoritos"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "Fechar %s"
@@ -47,20 +49,20 @@ msgstr "Fechar %s"
 msgid "Updates Queue"
 msgstr "Lista de Atualizações"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "Configurações de atualizações"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "Atualizações Automáticas"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "Atualizações automáticas ligadas"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
@@ -68,11 +70,11 @@ msgstr ""
 "Você tem Dados Ilimitados, então as atualizações automáticas foram ativadas "
 "para essa conexão."
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr "As atualizações automáticas estão desativadas para salvar seus dados"
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
@@ -80,19 +82,19 @@ msgstr ""
 "Você precisará escolher quais atualizações do Endless aplicar quando estiver"
 " nessa conexão."
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "Fechar"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "Mudar Configurações..."
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "Ligar"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "Desligar"
 
@@ -123,6 +125,14 @@ msgstr "Desative o Canto de Tela"
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "Nenhum aplicativo aberto"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "Barra inferior"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "Barra superior"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

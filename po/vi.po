@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Andre Magalhaes <andre@endlessm.com>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Andre Magalhaes <andre@endlessm.com>, 2020\n"
+"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
 "Language-Team: Vietnamese (https://www.transifex.com/endless-os/teams/9016/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +30,15 @@ msgstr "Các vùng làm việc khác"
 msgid "Current workspace"
 msgstr "Vùng làm việc hiện tại"
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "Ghim vào Thanh tác vụ"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "Đánh dấu ưa thích"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "Bỏ ghim khỏi Thanh tác vụ"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "Bỏ khỏi danh sách ưa thích"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "Thoát %s"
@@ -46,20 +47,20 @@ msgstr "Thoát %s"
 msgid "Updates Queue"
 msgstr "Các cập nhật đang chờ"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "Lên lịch"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "Các cập nhật tự động"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "Tự động cập nhật ở trạng thái mở"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
@@ -67,11 +68,11 @@ msgstr ""
 "Bạn có Gói dữ liệu Không giới hạn nên tự động cập nhật đã được bật cho kết "
 "nối này."
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr "Tự động cập nhật được tắt để lưu dữ liệu của bạn"
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
@@ -79,19 +80,19 @@ msgstr ""
 "Bạn sẽ cần phải chọn bản cập nhật Endless nào để áp dụng khi dùng kết nối "
 "này."
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "Đóng"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "Thay đổi Cài đặt..."
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "Bật"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "Tắt"
 
@@ -122,6 +123,14 @@ msgstr "Vô hiệu hóa Hot Corner"
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "Không có ứng dụng nào đang mở"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "Thanh Công cụ Dưới"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "Thanh đỉnh"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

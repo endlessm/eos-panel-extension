@@ -4,16 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessm.com>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# Zoltan Hoppar <hopparz@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
+"Last-Translator: Zoltan Hoppar <hopparz@gmail.com>, 2020\n"
 "Language-Team: Hungarian (https://www.transifex.com/endless-os/teams/9016/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +31,15 @@ msgstr "További munkaasztalok"
 msgid "Current workspace"
 msgstr "Jelenlegi munkaasztal"
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "Rögzítés tálcára"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "Hozzáadás a Kedvencekhez"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "Leválasztás a tálcáról"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "Eltávolítás a Kedvencek közül"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "%s bezárása"
@@ -46,48 +48,48 @@ msgstr "%s bezárása"
 msgid "Updates Queue"
 msgstr "Frissítési várólista"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "Ütemezés beállítása"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "Automatikus frissítések"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "Automatikus frissítések: BE"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr ""
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr ""
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr ""
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "Bezárás"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "Beállítások módosítása..."
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "Bekapcsolás"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "Kikapcsolás"
 
@@ -118,6 +120,14 @@ msgstr "Aktív sarok kikapcsolása"
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "Nincsenek nyitott alkalmazások"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "Alsó sáv"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "Felső sáv"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"

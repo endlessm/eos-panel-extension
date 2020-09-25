@@ -4,16 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessm.com>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
+# Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# 759b81c7bb2252a11f36c89344f31007, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-04 18:26-0300\n"
+"POT-Creation-Date: 2020-09-25 15:37+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Will Thompson <wjt@endlessm.com>, 2020\n"
+"Last-Translator: 759b81c7bb2252a11f36c89344f31007, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/endless-os/teams/9016/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +31,15 @@ msgstr "其它工作区"
 msgid "Current workspace"
 msgstr "当前工作区"
 
-#: ui/appIconBar.js:302
-msgid "Pin to Taskbar"
-msgstr "锁定到任务栏"
+#: ui/appIconBar.js:303
+msgid "Add to Favorites"
+msgstr "添加到收藏夹"
 
-#: ui/appIconBar.js:306
-msgid "Unpin from Taskbar"
-msgstr "取消固定到任务栏"
+#: ui/appIconBar.js:307
+msgid "Remove from Favorites"
+msgstr "从收藏夹中移除"
 
-#: ui/appIconBar.js:327
+#: ui/appIconBar.js:330
 #, javascript-format
 msgid "Quit %s"
 msgstr "退出%s"
@@ -46,48 +48,48 @@ msgstr "退出%s"
 msgid "Updates Queue"
 msgstr "更新队列"
 
-#: ui/automaticUpdates.js:110
+#: ui/automaticUpdates.js:113
 msgid "Set a Schedule"
 msgstr "设置日程"
 
 #. The status label
-#: ui/automaticUpdates.js:243
+#: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
 msgstr "自动更新"
 
-#: ui/automaticUpdates.js:307
+#: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
 msgstr "自动更新已开启"
 
-#: ui/automaticUpdates.js:308
+#: ui/automaticUpdates.js:310
 msgid ""
 "You have Unlimited Data so automatic updates have been turned on for this "
 "connection."
 msgstr "您拥有无限数据，因此此连接的自动更新已打开。"
 
-#: ui/automaticUpdates.js:311
+#: ui/automaticUpdates.js:313
 msgid "Automatic updates are turned off to save your data"
 msgstr "关闭自动更新以保存您的数据"
 
-#: ui/automaticUpdates.js:312
+#: ui/automaticUpdates.js:314
 msgid ""
 "You will need to choose which Endless updates to apply when on this "
 "connection."
 msgstr "您需要选择在连接时应用哪些 Endless 更新。"
 
-#: ui/automaticUpdates.js:332
+#: ui/automaticUpdates.js:334
 msgid "Close"
 msgstr "关闭"
 
-#: ui/automaticUpdates.js:336
+#: ui/automaticUpdates.js:338
 msgid "Change Settings…"
 msgstr "更改设置......"
 
-#: ui/automaticUpdates.js:362
+#: ui/automaticUpdates.js:364
 msgid "Turn On"
 msgstr "开启"
 
-#: ui/automaticUpdates.js:364
+#: ui/automaticUpdates.js:366
 msgid "Turn Off"
 msgstr "关闭"
 
@@ -118,6 +120,14 @@ msgstr "禁用热区"
 #: ui/overview.js:48
 msgid "No apps are open"
 msgstr "没有打开任何应用"
+
+#: ui/panel.js:180
+msgid "Bottom Bar"
+msgstr "底栏"
+
+#: ui/panel.js:234
+msgid "Top Bar"
+msgstr "顶栏"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
