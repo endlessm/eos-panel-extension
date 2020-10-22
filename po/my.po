@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 20:00+0000\n"
+"POT-Creation-Date: 2020-10-22 09:16+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
 "Last-Translator: Andre Magalhaes <andre@endlessm.com>, 2020\n"
 "Language-Team: Burmese (https://www.transifex.com/endless-os/teams/9016/my/)\n"
@@ -132,7 +132,7 @@ msgctxt "Power menu"
 msgid "Power"
 msgstr ""
 
-#: ui/systemMenu.js:38
+#: ui/systemMenu.js:39
 msgctxt "System menu"
 msgid "System"
 msgstr ""

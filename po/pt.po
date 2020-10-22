@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessos.org>, 2020
 # Philip Chimento <philip.chimento@gmail.com>, 2020
 # Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 20:00+0000\n"
+"POT-Creation-Date: 2020-10-22 09:16+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>, 2020\n"
 "Language-Team: Portuguese (https://www.transifex.com/endless-os/teams/9016/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,7 +55,7 @@ msgstr ""
 #. The status label
 #: ui/automaticUpdates.js:245
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Atualizações Automáticas"
 
 #: ui/automaticUpdates.js:309
 msgid "Automatic updates on"
@@ -134,7 +134,7 @@ msgctxt "Power menu"
 msgid "Power"
 msgstr "Desligar"
 
-#: ui/systemMenu.js:38
+#: ui/systemMenu.js:39
 msgctxt "System menu"
 msgid "System"
 msgstr ""
