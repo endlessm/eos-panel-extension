@@ -4,18 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Will Thompson <wjt@endlessos.org>, 2020
 # Philip Chimento <philip.chimento@gmail.com>, 2020
 # Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# Will Thompson <wjt@endlessos.org>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-22 09:16+0000\n"
+"POT-Creation-Date: 2020-10-29 09:15+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
+"Last-Translator: Will Thompson <wjt@endlessos.org>, 2020\n"
 "Language-Team: French (https://www.transifex.com/endless-os/teams/9016/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -142,7 +142,7 @@ msgstr "Énergie"
 #: ui/systemMenu.js:39
 msgctxt "System menu"
 msgid "System"
-msgstr ""
+msgstr "Système"
 
 #: ui/userMenu.js:35
 msgid "Settings"
