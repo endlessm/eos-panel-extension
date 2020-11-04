@@ -11,6 +11,7 @@ ui_sources = [
   'ui/appFavorites.js',
   'ui/appIconBar.js',
   'ui/automaticUpdates.js',
+  'ui/boxpointer.js',
   'ui/endlessButton.js',
   'ui/hotCorner.js',
   'ui/layout.js',

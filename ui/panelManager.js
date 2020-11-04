@@ -23,6 +23,7 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const AppFavoritesWrapper = PanelExtension.imports.ui.appFavorites;
+const BoxPointer = PanelExtension.imports.ui.boxpointer;
 const LayoutManagerWrapper = PanelExtension.imports.ui.layout;
 const PanelWrapper = PanelExtension.imports.ui.panel;
 const OverviewWrapper = PanelExtension.imports.ui.overview;
@@ -40,6 +41,7 @@ class PanelManager extends GObject.Object {
         if (this.enabled)
             return;
 
+        BoxPointer.enable();
         WorkspaceMonitor.enable();
         OverviewWrapper.enable();
         PanelWrapper.enable();
@@ -53,6 +55,7 @@ class PanelManager extends GObject.Object {
         if (!this.enabled)
             return;
 
+        BoxPointer.disable();
         WorkspaceMonitor.disable();
         OverviewWrapper.disable();
         PanelWrapper.disable();

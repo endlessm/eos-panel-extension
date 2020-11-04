@@ -22,6 +22,7 @@ const { Clutter, St } = imports.gi;
 const CtrlAltTab = imports.ui.ctrlAltTab;
 const Main = imports.ui.main;
 const Panel = imports.ui.panel;
+const PopupMenu = imports.ui.popupMenu;
 
 const ExtensionUtils = imports.misc.extensionUtils;
 const PanelExtension = ExtensionUtils.getCurrentExtension();
@@ -104,6 +105,19 @@ function _getPanelForSessionMode(sessionMode) {
     return [panel, panelStyle];
 }
 
+function _updateIndicatorArrow(indicator, arrowSide) {
+    if (indicator.menu && (indicator.menu instanceof PopupMenu.PopupMenu)) {
+        indicator.menu._arrowSide = arrowSide;
+        indicator.menu.setArrowOrigin(arrowSide);
+        indicator.menu._boxPointer.updateArrowSide(arrowSide);
+    }
+}
+
+function _updateIndicatorArrows(origin, arrowSide) {
+    for (const indicator of Object.values(Main.panel.statusArea))
+        _updateIndicatorArrow(indicator, arrowSide);
+}
+
 function enable() {
     Utils.override(Panel.Panel, '_updatePanel', function() {
         const [panel, panelStyle] = _getPanelForSessionMode(Main.sessionMode);
@@ -170,6 +184,8 @@ function enable() {
         });
         _extraIndicators.push([indicator, destroyId]);
 
+        _updateIndicatorArrow(indicator, St.Side.BOTTOM);
+
         return indicator;
     });
 
@@ -196,6 +212,8 @@ function enable() {
         const original = Utils.original(CtrlAltTab.CtrlAltTabManager, 'popup');
         original.bind(this)(backward, binding, mask);
     });
+
+    _updateIndicatorArrows(St.Side.BOTTOM);
 
     // workaround to make sure the overriden Panel._updatePanel is
     // invoked when the session mode is updated. The original signal
@@ -239,5 +257,6 @@ function disable() {
         _sessionModeUpdatedId = 0;
     }
 
+    _updateIndicatorArrows(St.Side.TOP);
     panel._updatePanel();
 }
