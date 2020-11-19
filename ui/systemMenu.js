@@ -30,7 +30,6 @@ const PanelExtension = ExtensionUtils.getCurrentExtension();
 
 const AutomaticUpdates = PanelExtension.imports.ui.automaticUpdates;
 const Power = PanelExtension.imports.ui.power;
-const RemoteAccess = PanelExtension.imports.ui.remoteAccess;
 const _ = PanelExtension.imports.utils.gettext;
 
 var SystemMenu = GObject.registerClass(
@@ -65,7 +64,7 @@ class SystemMenu extends PanelMenu.Button {
             this._payg = null;
             log('Unable to load PAYG indicator, ignoring');
         }
-        this._remoteAccess = new RemoteAccess.RemoteAccessIndicator();
+        this._remoteAccess = new imports.ui.status.remoteAccess.RemoteAccessApplet();
         this._power = new Power.Indicator();
         this._rfkill = new imports.ui.status.rfkill.Indicator();
         this._volume = new imports.ui.status.volume.Indicator();
