@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-29 09:15+0000\n"
+"POT-Creation-Date: 2021-03-04 10:17+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
 "Last-Translator: georgian balan <braila222@gmail.com>, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/endless-os/teams/9016/ro/)\n"
@@ -121,11 +121,11 @@ msgstr "Opreste Colt"
 msgid "No apps are open"
 msgstr "Nici o aplicatie deschisa"
 
-#: ui/panel.js:180
+#: ui/panel.js:196
 msgid "Bottom Bar"
 msgstr "Bara de jos"
 
-#: ui/panel.js:234
+#: ui/panel.js:252
 msgid "Top Bar"
 msgstr "Bara de sus"
 
@@ -134,7 +134,7 @@ msgctxt "Power menu"
 msgid "Power"
 msgstr "Pornire"
 
-#: ui/systemMenu.js:39
+#: ui/systemMenu.js:38
 msgctxt "System menu"
 msgid "System"
 msgstr ""

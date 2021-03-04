@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-29 09:15+0000\n"
+"POT-Creation-Date: 2021-03-04 10:17+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
 "Last-Translator: 759b81c7bb2252a11f36c89344f31007, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/endless-os/teams/9016/zh_CN/)\n"
@@ -121,11 +121,11 @@ msgstr "禁用热区"
 msgid "No apps are open"
 msgstr "没有打开任何应用"
 
-#: ui/panel.js:180
+#: ui/panel.js:196
 msgid "Bottom Bar"
 msgstr "底栏"
 
-#: ui/panel.js:234
+#: ui/panel.js:252
 msgid "Top Bar"
 msgstr "顶栏"
 
@@ -134,7 +134,7 @@ msgctxt "Power menu"
 msgid "Power"
 msgstr "电源"
 
-#: ui/systemMenu.js:39
+#: ui/systemMenu.js:38
 msgctxt "System menu"
 msgid "System"
 msgstr ""
