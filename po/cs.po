@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Will Thompson <wjt@endlessos.org>, 2020
-# Pavel Borecki <pavel.borecki@gmail.com>, 2020
 # Roddy Shuler <roddy@stanfordalumni.org>, 2020
+# Pavel Borecki <pavel.borecki@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: eos-panel-extension\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-01 09:15+0000\n"
+"POT-Creation-Date: 2021-09-29 14:01+0000\n"
 "PO-Revision-Date: 2020-09-04 21:22+0000\n"
-"Last-Translator: Roddy Shuler <roddy@stanfordalumni.org>, 2020\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>, 2021\n"
 "Language-Team: Czech (https://www.transifex.com/endless-os/teams/9016/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +29,7 @@ msgstr "Ostatní plochy"
 
 #: ui/appIconBar.js:225
 msgid "Current workspace"
-msgstr "Aktuální plocha"
+msgstr "Stávající plocha"
 
 #: ui/appIconBar.js:303
 msgid "Add to Favorites"
@@ -126,11 +126,11 @@ msgstr "Nejsou spuštěné žádné aplikace"
 
 #: ui/panel.js:196
 msgid "Bottom Bar"
-msgstr ""
+msgstr "Spodní panel"
 
 #: ui/panel.js:252
 msgid "Top Bar"
-msgstr "Horní lišta"
+msgstr "Horní panel"
 
 #: ui/powerButton.js:34
 msgctxt "Power menu"
